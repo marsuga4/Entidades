@@ -1,0 +1,165 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.header {           
+    text-align: center;       
+    max-height: 30px;   
+}
+
+
+h3{
+	color: #00008b;
+	font-family: arial;	
+	font-size: 14px;	
+}
+
+
+.questions{
+  padding-top: 10px;     
+}
+
+.answers{
+  overflow: hidden;
+}
+
+#container {
+  margin:0 auto;
+  text-align: center;
+}
+
+#first {
+  float: left;
+}
+
+#second {
+  float: left;
+}
+
+#clear {
+  clear: both;
+}
+  
+#space{
+  width:20px;
+  height:20px;
+  float: left;
+}
+
+#space1{
+  width:10px;
+  height:10px;
+  float: left;
+}
+
+#espaco-td{
+  width:320px;
+  height:20px;
+  float: left;
+}
+
+
+td{
+  padding:2px;
+}
+
+
+span.data-ref{
+  margin-left: 45em;   
+}
+
+#tab-border{
+  border: 1px solid black; 
+  border-spacing: 5em;
+}
+
+.elem-esq{
+  float: left; width: 40%;
+}
+
+.elem-esq{
+  float: left; width: 20%;
+}
+
+.tab-dir{
+  margin-left: 45%;
+}
+
+h4{
+	color: #00008b;
+	font-family: arial;	
+  font-size: 14px;	
+  text-align: center;  
+}
+
+h2{
+	color: #808080;
+	font-family: arial;	
+  font-size: 14px;	
+  text-align: center;  
+  border: 1px solid black; 
+  width: 400px;
+  margin: auto;  
+}
+
+table tr[class=separar]{
+  display:block;
+  margin-bottom:8px;
+  padding-right: 230px;
+  }
+ 
+ .tab-portfolio  {
+  border-spacing: 10px;
+  border-collapse: separate; 
+ }
+
+
+ .valor-tab{
+  border: 1px solid black; 
+  border-spacing: 5em; 
+}
+  
+ #no-border{
+  border: 1px solid rgba(0, 0, 0, 0);; 
+  border-spacing: 5em;   
+}
+
+input:required{
+  border-color: red!important;
+}
+
+.ajax-loader img {
+  position: relative;
+  top:50%;
+  left:50%;
+}
+ 
+#inputLimCalculado { 
+  float: right; 
+}
+
+.eapaco_esq .espaco_dir {
+  margin: 55px;
+}
+
+/* alinhar o botão de gerar súmula */
+#gerarBtn {
+  position:absolute; 
+  top:43%;
+  left:64.3%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+
+
+
+
+
+
+
