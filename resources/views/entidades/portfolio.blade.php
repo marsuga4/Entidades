@@ -8,7 +8,7 @@
         <table style="float: left">        
                 <tr>
                         <td>Limite estabelecido/proposto</td>
-                        <td class="valor-tab"><input id="limPropPortf" name="limPropPortf" style= "text-align: right;" id="valor" class="format"/></td>
+                        <td class="valor-tab"><input id="limPropPortf" readonly="“true”" name="limPropPortf" style= "text-align: right;" id="valor" class="format"/></td>
                 </tr>    
                 <tr class="separar"></tr>
                 <tr>
@@ -21,29 +21,38 @@
         <table style="float: left">                                
                 <tr>
                         <td>Limite anterior</td>
-                        <td class="valor-tab"><input id="portfLimAnt" style= "text-align: right;"/></td>
+                        <td class="valor-tab"><input id="portfLimAnt" readonly="“true”" name="portfLimAnt" style= "text-align: right;"/></td>
                 </tr>    
                 <tr class="separar"></tr>
                 <tr>
                         <td>Risco anterior</td>       
-                        <td class="valor-tab"><input id="portfRiscAnt" style= "text-align: center;"/></td>
+                        <td class="valor-tab"><input id="portfRiscAnt" name="portfRiscAnt" style= "text-align: center;"/></td>
                 </tr>  
                 <tr class="separar"></tr>
                 <tr>                                                
                         <td>Limite calculado</td>
-                        <td class="valor-tab"><span style= "text-align: right;" id="inputLimCalculado" name="inputLimCalculado"></span></td>                                                                
+                        <td class="valor-tab" style= "text-align: right;">
+                                <span id="inputLimCalculadoSpan" name="inputLimCalculadoSpan"></span>
+                                <input type='hidden' id="inputLimCalculado" name="inputLimCalculado">
+                        </td>                                                                
                 </tr>    
                 <tr class="separar"></tr>
                 <tr>
                         <td>Risco calculado/atribuído</td>   
-                        <td class="valor-tab"><span style="margin:auto; display:table;" id="inputRisco1"></span></td>    
+                        <td class="valor-tab">
+                                <span style="margin:auto; display:table;" id="inputRisco1Span" name="inputRisco1Span"></span>
+                                <input type='hidden' id="inputRisco1" name="inputRisco1">
+                        </td>    
                         <!-- <label class="valor-tab" id="inputRisco1"></label> -->
 
                 </tr>      
                 <tr class="separar"></tr>
                 <tr>
                         <td>Risco calculado/atribuído FEI</td>     
-                        <td class="valor-tab"><span style="margin:auto; display:table;" id="inputRisco2"></span></td>                                                   
+                        <td class="valor-tab">
+                                <span style="margin:auto; display:table;" id="inputRisco2Span" name="inputRisco2Span"></span>
+                                <input type='hidden' id="inputRisco2" name="inputRisco2">
+                        </td>                                                   
                 </tr>                                                                  
         </table>
 </div>

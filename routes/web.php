@@ -10,6 +10,7 @@ Route::name('entidade.')->prefix('entidades')->group(function(){
     //enviar o id da série ao banco de dados
     Route::delete('/{id}', 'EntidadesController@destroy')->name('delete');
     Route::get('/show','EntidadesController@show')->name('show');
+    Route::post('/pdf','EntidadesController@pdf')->name('pdf');
 });
 
 

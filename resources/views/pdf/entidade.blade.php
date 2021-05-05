@@ -65,10 +65,10 @@ Data da alteração:
 
         <!-- Perguntas 3 e 4 -->
         <tr>
-            <td class="questions">
+            <td class="questions w50">
                 03. Histórico de restrições nos últimos cinco anos
             </td>
-            <td class="questions">
+            <td class="questions w50">
                 04. Tempo de atividade
             </td>
         </tr>
@@ -107,10 +107,10 @@ Data da alteração:
 
         <!-- Perguntas 5 e 6 -->
         <tr>
-            <td class="questions">
+            <td class="questions w50">
                 05. Cliente desde
             </td>
-            <td class="questions">
+            <td class="questions w50">
                 06. Conceito na praça
             </td>
         </tr>
@@ -187,10 +187,10 @@ Data da alteração:
 
         <!-- Perguntas 8 e 9 -->
         <tr>
-            <td class="questions">
+            <td class="questions w50">
                 08. Utilização de cheque especial (últimos 6 meses)
             </td>
-            <td class="questions">
+            <td class="questions w50">
                 09. Situação atual das operações
             </td>
         </tr>
@@ -198,20 +198,20 @@ Data da alteração:
         <!-- Repostas das perguntas 8 e 9 -->
         <tr>
             <td class="answers">
-            @if ($cheque == 0)
-                Não possui cheque especial - opção da agência
-            @elseif ($cheque == 35)
-                Utiliza eventualmente o limite de seu cheque especial
-            @elseif($cheque == 30)
-                Não possui cheque especial - opção da entidade
-            @elseif($cheque == 15)
-                Utiliza frequentemente o limite de seu cheque especial
-            @elseif($cheque == 50)
-                Nunca utiliza o limite de seu cheque especial
-            @elseif($cheque == 5)
-                Excede frequentemente o limite de seu cheque especial
-            @endif
-        </td>
+                @if ($cheque == 0)
+                    Não possui cheque especial - opção da agência
+                @elseif ($cheque == 35)
+                    Utiliza eventualmente o limite de seu cheque especial
+                @elseif($cheque == 30)
+                    Não possui cheque especial - opção da entidade
+                @elseif($cheque == 15)
+                    Utiliza frequentemente o limite de seu cheque especial
+                @elseif($cheque == 50)
+                    Nunca utiliza o limite de seu cheque especial
+                @elseif($cheque == 5)
+                    Excede frequentemente o limite de seu cheque especial
+                @endif
+            </td>
             <td class="answers">
                 @if($opr == 40)
                     Normal
@@ -227,493 +227,479 @@ Data da alteração:
 
         <!-- Perguntas 10 e 11 -->
         <tr>
-            <td class="questions">
+            <td class="questions w50">
                 10. Pontualidade no pagamento de empréstimos no Banco nos últimos 3 anos
             </td>
-            <td class="questions">
+            <td class="questions w50">
                 11. Pontualidade Fontes Externas
             </td>
         </tr>
 
-         <!-- Repostas das perguntas 10 e 11 -->
-         <tr>
+        <!-- Repostas das perguntas 10 e 11 -->
+        <tr>
             <td class="answers">
-            @if($pontBB === "10.000000001")
-                Não tomou empréstimos
-            @elseif($pontBB == 10)
-                Deixou de pagar algum empréstimo no vencimento
-            @elseif($pontBB == 60)
-                Pagou todos os empréstimos no vencimento
-            @elseif($pontBB == 0)
-                Deixou de pagar vários empréstimos no vencimento
-            @endif
+                @if($pontBB === "10.000000001")
+                    Não tomou empréstimos
+                @elseif($pontBB == 10)
+                    Deixou de pagar algum empréstimo no vencimento
+                @elseif($pontBB == 60)
+                    Pagou todos os empréstimos no vencimento
+                @elseif($pontBB == 0)
+                    Deixou de pagar vários empréstimos no vencimento
+                @endif
             </td>
             <td class="answers">
-            @if($pontExt === "10.000000001")
-                Pontualidade não apurada
-            @elseif($pontExt == 30)
-                Pontual
-            @elseif($pontExt == 10)
-                Paga com pequenos atrasos (até 15 dias)
-            @elseif($pontExt == 0)
-                Paga com atrasos (de 16 a 60 dias)
-            @elseif($pontExt == -900)
-                Habitualmente impontual (mais de 60 dias)
-            @endif
+                @if($pontExt === "10.000000001")
+                    Pontualidade não apurada
+                @elseif($pontExt == 30)
+                    Pontual
+                @elseif($pontExt == 10)
+                    Paga com pequenos atrasos (até 15 dias)
+                @elseif($pontExt == 0)
+                    Paga com atrasos (de 16 a 60 dias)
+                @elseif($pontExt == -900)
+                    Habitualmente impontual (mais de 60 dias)
+                @endif
             </td>
         </tr>
+   
 
-        <!-- Questão 12-->
+        <!-- Questão 12-->      
         <tr>
             <td class="questions">
                 12. Reponsabilidades fiscais e previdenciárias
             </td>
         </tr>
         
-        <!-- --    -->
+        <!-- Preenchimento da questão 12 -->
         <table class="border answers">
-                <tr>
-                    <td style="width:105px"></td>
-                    <td class="bold" style="text-align: center; width:175px;"> Último Exercício - R$ </td>
-                    <td class="bold" style="text-align: center; width:175px;"> Atual - R$ </td>
-                    <td> <span class="bold"> Situação:&nbsp </span>{{$situacaoDoze}} </td>
-                </tr>
-                <tr>
-                    <td>A vencer</td>
-                    <td class="number">{{$respFiscPrev1_ant}}</td>
-                    <td class="number">{{$respFiscPrev1}}</td>
-                    <td>&nbsp</td>
-                </tr>
-                <tr>
-                    <td>Vencidas - até 60 dias</td>
-                    <td class="number">{{$respFiscPrev2_ant}}</td>
-                    <td class="number">{{$respFiscPrev2}}</td>
-                    <td>&nbsp</td>
-                </tr>
-                <tr>
-                    <td>Vencidas - há mais de 60 dias</td>
-                    <td class="number">{{$respFiscPrev3_ant}}</td>
-                    <td class="number">{{$respFiscPrev3}}</td>
-                    <td>&nbsp</td>
-                </tr>
-                <tr>
-                    <td>Renegociadas - a vencer</td>
-                    <td class="number">{{$respFiscPrev4_ant}}</td>
-                    <td class="number">{{$respFiscPrev4}}</td>
-                    <td>&nbsp</td>
-                </tr>
-                <tr>
-                    <td>Renegociadas - vencidas até 60 dias</td>
-                    <td class="number">{{$respFiscPrev5_ant}}</td>
-                    <td class="number">{{$respFiscPrev5}}</td>
-                    <td>&nbsp</td>
-                </tr>
-                <tr>
-                    <td>Renegociadas - vencidas há mais de 60 dias</td>
-                    <td class="number">{{$respFiscPrev6_ant}}</td>
-                    <td class="number">{{$respFiscPrev6}}</td>
-                    <td>&nbsp</td>
-                </tr>
-            </table>
+            <tr>
+                <td style="width:105px"></td>
+                <td class="bold" style="text-align: center; width:175px;"> Último Exercício - R$ </td>
+                <td class="bold" style="text-align: center; width:175px;"> Atual - R$ </td>
+                <td> <span class="bold"> Situação:&nbsp </span>{{$situacaoDoze}} </td>
+            </tr>
+            <tr>
+                <td>A vencer</td>
+                <td class="number">{{$respFiscPrev1_ant}}</td>
+                <td class="number">{{$respFiscPrev1}}</td>
+                <td>&nbsp</td>
+            </tr>
+            <tr>
+                <td>Vencidas - até 60 dias</td>
+                <td class="number">{{$respFiscPrev2_ant}}</td>
+                <td class="number">{{$respFiscPrev2}}</td>
+                <td>&nbsp</td>
+            </tr>
+            <tr>
+                <td>Vencidas - há mais de 60 dias</td>
+                <td class="number">{{$respFiscPrev3_ant}}</td>
+                <td class="number">{{$respFiscPrev3}}</td>
+                <td>&nbsp</td>
+            </tr>
+            <tr>
+                <td>Renegociadas - a vencer</td>
+                <td class="number">{{$respFiscPrev4_ant}}</td>
+                <td class="number">{{$respFiscPrev4}}</td>
+                <td>&nbsp</td>
+            </tr>
+            <tr>
+                <td>Renegociadas - vencidas até 60 dias</td>
+                <td class="number">{{$respFiscPrev5_ant}}</td>
+                <td class="number">{{$respFiscPrev5}}</td>
+                <td>&nbsp</td>
+            </tr>
+            <tr>
+                <td>Renegociadas - vencidas há mais de 60 dias</td>
+                <td class="number">{{$respFiscPrev6_ant}}</td>
+                <td class="number">{{$respFiscPrev6}}</td>
+                <td>&nbsp</td>
+            </tr>
+        </table>
 
+    </table>
+    <table>
+        <!-- Questão 13-->
+        <tr>
+            <td class="questions">
+                13. Reponsabilidades junto aos fornecedores
+            </td>
+        </tr>
+    
+            <!-- Preenchimento da questão 13 -->
+        <table class="border answers">    
+            <tr>
+                <td style="width:105px"></td>
+                <td class="bold" style="text-align: center; width:175px;"> Último Exercício - R$ </td>
+                <td class="bold" style="text-align: center; width:175px;"> Atual - R$ </td>
+                <td> <span class="bold"> Situação:&nbsp </span>{{$situacaoTreze}} </td>
+            </tr>
+            <tr>
+                <td>A vencer</td>
+                <td class="number">{{$RespForn1_ant}}</td>
+                <td class="number">{{$RespForn1}}</td>
+                <td>&nbsp</td>                
+            </tr>
+            <tr>
+                <td>Vencidas - até 60 dias</td>
+                <td class="number">{{$RespForn2_ant}}</td>
+                <td class="number">{{$RespForn2}}</td>
+                <td>&nbsp</td> 
+            </tr>
+            <tr>
+                <td>Vencidas - há mais de 60 dias</td>
+                <td class="number">{{$RespForn3_ant}}</td>
+                <td class="number">{{$RespForn3}}</td>
+                <td>&nbsp</td> 
+            </tr>
+            <tr>
+                <td>Renegociadas - a vencer</td>
+                <td class="number">{{$RespForn4_ant}}</td>
+                <td class="number">{{$RespForn4}}</td>
+                <td>&nbsp</td> 
+            </tr>
+            <tr>
+                <td>Renegociadas - vencidas até 60 dias</td>
+                <td class="number">{{$RespForn5_ant}}</td>
+                <td class="number">{{$RespForn5}}</td>
+                <td>&nbsp</td> 
+            </tr>
+            <tr>
+                <td>Renegociadas - vencidas há mais de 60 dias</td>
+                <td class="number">{{$RespForn6_ant}}</td>
+                <td class="number">{{$RespForn6}}</td>
+                <td>&nbsp</td> 
+            </tr>
+        </table>
+    </table>    
+    
+    <table>
+        <!-- Questão 14-->
+        <tr>
+            <td class="questions">
+                14. Reponsabilidades trabalhistas
+            </td>
+        </tr>
+
+            <!-- Preenchimento da questão 14 -->
+        <table class="border answers">    
+            <tr>
+                <td style="width:105px"></td>
+                <td class="bold" style="text-align: center; width:175px;"> Último Exercício - R$ </td>
+                <td class="bold" style="text-align: center; width:175px;"> Atual - R$ </td>
+                <td> <span class="bold"> Situação:&nbsp </span>{{$situacaoCatorze}} </td>
+            </tr>
+            <tr>
+                <td>A vencer</td>
+                <td class="number">{{$RespTrab1_ant}}</td>
+                <td class="number">{{$RespTrab1}}</td>
+                <td>&nbsp</td>                
+            </tr>
+            <tr>
+                <td>Vencidas - até 60 dias</td>
+                <td class="number">{{$RespTrab2_ant}}</td>
+                <td class="number">{{$RespTrab2}}</td>
+                <td>&nbsp</td> 
+            </tr>
+            <tr>
+                <td>Vencidas - há mais de 60 dias</td>
+                <td class="number">{{$RespTrab3_ant}}</td>
+                <td class="number">{{$RespTrab3}}</td>
+                <td>&nbsp</td> 
+            </tr>
+            <tr>
+                <td>Renegociadas - a vencer</td>
+                <td class="number">{{$RespTrab4_ant}}</td>
+                <td class="number">{{$RespTrab4}}</td>
+                <td>&nbsp</td> 
+            </tr>
+            <tr>
+                <td>Renegociadas - vencidas até 60 dias</td>
+                <td class="number">{{$RespTrab5_ant}}</td>
+                <td class="number">{{$RespTrab5}}</td>
+                <td>&nbsp</td> 
+            </tr>
+            <tr>
+                <td>Renegociadas - vencidas há mais de 60 dias</td>
+                <td class="number">{{$RespTrab6_ant}}</td>
+                <td class="number">{{$RespTrab6}}</td>
+                <td>&nbsp</td> 
+            </tr>
+        </table>
+    </table>
+    <table>
+        <!-- 15. Autorização SCR -->
+        <tr>
+            <td class="questions">
+                15. Autorização para consulta ao sistema de informações de crédito do Bacen (SCR)
+            </td>
+        </tr>        
+        <!-- Resposta da questão 15 -->
+        <tr>
+            <td class="answers">
+                @if($scr == 0)
+                    Sim
+                @else
+                    Não
+                @endif
+            </td>    
+        </tr>
+        
+
+        <!-- Pergunta da questão 16 -->
+        <tr>
+            <td class="questions">
+                16. Endividamento no SCR (Fonte: aplicativo Clientes-04)
+            </td>
+        </tr>
+
+        <!-- Respostas da questão 16 -->
+        
+        <table  class="tab16a anwers">
+            <tr class="bold" style="text-align:center">
+                <td> A vencer</td>
+                <td>Valor em R$</td>
+            </tr>
+            <tr>
+                <td>Em até 180 dias</td>
+                <td class="number">{{$entVencerSCR1}}</td>
+            </tr>
+            <tr>
+                <td>De 180 a 360 dias</td>
+                <td class="number">{{$entVencerSCR2}}</td>
+            </tr>
+            <tr>
+                <td>Acima de 360 dias</td>
+                <td class="number">{{$entVencerSCR3}}</td>
+            </tr>
+            <tr>
+                <td><b>Total</b></td>
+                <td class="number bold">{{$entTotVencerSCR}}</td>
+            </tr>
+        </table>
        
+        <table class="tab16b">
+            <tr class="bold" style="text-align:center">
+                <td style ="width:20%"> Vencidos</td>
+                <td style ="width:10%"> Valor em R$</td>
+            </tr>
+            <tr>
+                <td>Até 60 dias</td>
+                <td class="number"> {{$entVencidoSCR1}}</td>
+            </tr>
+            <tr>
+                <td>De 61 a 180 dias</td>
+                <td class="number"> {{$entVencidoSCR2}}</td>
+            </tr>
+            <tr>
+                <td>De 181 a 360 dias</td>
+                <td class="number"> {{$entVencidoSCR3}}</td>
+            </tr>
+            <tr>
+                <td>Acima de 360 dias</td>
+                <td class="number"> {{$entVencidoSCR4}}</td>
+            </tr>
+            <tr>
+                <td class="bold">Total vencido</td>
+                <td class="number bold">{{$entVencidoSCR}}</td>
+            </tr>
+        </table>
 
-    
 
-    
+        <table class="tab16c">
+            <tr>
+                <td>Créditos baixados no(s) exercício(s) anterior(es)</td>
+                <td class="number">{{$entBaixSCR}}</td>
+            </tr>
+            <tr>
+                <td>Coobrigações</td>
+                <td class="number">{{$coobrig}}</td>
+            </tr>
+        </table>
+        
+       
+        <table>
+            <tr>
+                <td class="questions" style="color: black;">
+                        Houve atraso nos últimos 12 meses já regularizados?
+                </td>
+            </tr>        
+            
+            <tr>
+                <td class="answers">
+                    @if($atraso == -5)
+                        Sim
+                    @else
+                        Não
+                    @endif
+                </td>    
+            </tr>
+        </table>   
 
-    
+         <!-- Perguntas 17 e 18-->
+        <table>
+            <tr>
+                <td class="questions w50">         
+                    17. Análise anterior do limite efetuada na Dicre conforme IN 23, com envio de documentação
+                </td>  
+                        
+                <td class="questions w50">         
+                    18. Risco anterior
+                </td>  
+            </tr>
 
-    </table>
+            <!-- Respostas  17 e 18-->
+            <tr> 
+                <td class="answers">    
+                    @if($analise === "0.000000001")
+                        Sim
+                    @else
+                        Não, efetuada por meio de planilha
+                    @endif
+                </td>  
+
+                <td class="answers">   
+                    @if($riscAnt === "0.000000001")
+                        A
+                    @elseif($riscAnt === "0.000000002")
+                        B
+                    @elseif($riscAnt === "0.000000003")
+                        C
+                    @elseif($riscAnt === "0.000000004")
+                        D
+                    @elseif($riscAnt === "0.000000005")
+                        E
+                    @elseif($riscAnt === "0.000000006")
+                        Sem risco anterior
+                    @endif
+                </td>       
+            </tr>
+        </table>
+
+        <!-- Pergunta 19 -->
+        <table>
+            <tr>
+                <td class="questions">         
+                    19. Concentração de receitas nos cinco principais clientes/associados/colaboradores/doadores
+                </td>  
+                        
+                
+            </tr>
+
+            <!-- Resposta  19-->
+            <tr> 
+                <td class="answers">    
+                    @if($concent === "0.000000001")
+                        Menos de 20%
+                    @elseif($concent === "0.000000002")
+                        De 20 a 49%
+                    @elseif($concent === "0.000000003")
+                        De 50 a 79%
+                    @elseif($concent === "0.000000004")
+                        De 80 a 100%
+                    @endif
+                </td>  
+                
+            </tr>
+        </table>
+
+        <!-- Pergunta e resposta da questão 20 -->
+        <table>
+            <tr>
+                <td class="questions">         
+                    20. Limite vigente: 
+                    <span class="nobold">
+                        @if($limVig === "0.000000001")
+                                Sim
+                        @else
+                                Não
+                        @endif
+                    </span>    
+                <td>                                                           
+            </tr>            
+        </table>
+
+        <!-- tabela da questão 20 -->
+        <table  class="anwers tab20">
+            <tr class="bold" style="text-align:center">
+                <td>&nbsp</td>
+                <td> Valor em R$</td>
+                <td> Vencimento</td>
+            </tr>
+            <tr>
+                <td>Limite de Crédito</td>
+                <td class="number td_tab20">{{$entLim}}</td>
+                <td class="number td_tab20">{{$vencAtual}}</td>
+            </tr>
+            <tr>
+                <td>Cheque Ouro Empresarial</td>
+                <td class="number td_tab20">{{$entCheque}}</td>
+                <td class="number td_tab20">{{$venCheque}}</td>
+            </tr>
+            <tr>
+                <td>Cartão Empresarial</td>
+                <td class="number td_tab20">{{$entCartaoEmp}}</td>
+                <td class="number td_tab20">{{$venCartao}}</td>
+            </tr>            
+        </table>
 
 
+        <!-- Pergunta 21 -->
+        <table>
+            <tr>
+                <td class="questions">         
+                    21. Receita bruta anual nos últimos 3 exercícios                    
+                <td>                                                           
+            </tr>            
+        </table>
 
+        <!-- tabela da questão 21 -->
+        <table  class="anwers tab21">
+            <tr class="bold" style="text-align:center">
+                <td> Exercício</td>
+                <td> Valor - R$</td>                
+            </tr>
+            <tr style="text-align:center"> 
+                <td>{{$exerc1}}</td>
+                <td class="number"> {{$entROB1}} </td>                
+            </tr>
+            <tr style="text-align:center">
+                <td>{{$exerc2}}</td>
+                <td class="number"> {{$entROB2}} </td>               
+            </tr>
+            <tr>
+                <td  style="text-align:center">{{$exerc3}}</td>
+                <td class="number"> {{$entROB3}} </td>  
+            </tr>            
+        </table>
+
+
+        <table class="anwers tab21">
+            <tr>
+                <td class="questions" style="color: black;">Últimos 12 meses</td>
+                <td class="number"> {{$entTotROB}}</td>
+            </tr>
+        </table>
+
+
+        <!-- Pergunta da questão 22 -->
+        <table>
+            <tr>
+                <td class="questions">         
+                    22. Informe a quantidade de dirigentes:
+                        <span class="nobold">
+                            @if($dirigente == 1)
+                                Um dirigente
+                            @else
+                                Dois dirigentes
+                            @endif
+                        </span>            
+                <td>        
+            </tr>            
+        </table>
+    </table>      
 </div>
+   
 
-
-    <!-- 13. Reponsabilidades Junto aos Fornecedores -->
-
-    <div class="questions">
-        13. Reponsabilidades junto aos fornecedores
-    </div>
-
-    <div class="answers">
-        <table style="float: left">
-            <tr>
-                <td id="espaco-td">&nbsp</td>
-                <td style="text-align: center;"> <b> Último Exercício - R$ </b> </td>
-            </tr>
-            <tr>
-                <td>A vencer</td>
-                <td>{{$RespForn1_ant}}</td>
-            </tr>
-            <tr>
-                <td>Vencidas - até 60 dias</td>
-                <td>{{$RespForn2_ant}}</td>
-            </tr>
-            <tr>
-                <td>Vencidas - há mais de 60 dias</td>
-                <td>{{$RespForn3_ant}}</td>
-            </tr>
-            <tr>
-                <td>Renegociadas - a vencer</td>
-                <td>{{$RespForn4_ant}}</td>
-            </tr>
-            <tr>
-                <td>Renegociadas - vencidas até 60 dias</td>
-                <td>{{$RespForn5_ant}}</td>
-            </tr>
-            <tr>
-                <td>Renegociadas - vencidas há mais de 60 dias</td>
-                <td>{{$RespForn6_ant}}</td>
-            </tr>
-
-        </table>
-
-        <table style="float: left">
-            <tr>
-                <td style="text-align: center;"><b> Atual - R$ </b> </td>
-            </tr>
-            <tr>
-                <td> {{$RespForn1}}</td>
-            </tr>
-            <tr>
-                <td> {{$RespForn2}}</td>
-            </tr>
-            <tr>
-                <td> {{$RespForn3}}</td>
-            </tr>
-            <tr>
-                <td> {{$RespForn4}}</td>
-            </tr>
-            <tr>
-                <td> {{$RespForn5}}</td>
-            </tr>
-            <tr>
-                <td> {{$RespForn6}}</td>
-            </tr>
-        </table>
-
-        <div>
-            <b>Situação:&nbsp</b>
-            <!-- <p id="situacao13"></p> -->
-        </div>
-    </div>
-    <br><br><br><br><br><br><br>
-    <!-- 14. Reponsabilidades trabalhistas -->
-
-    <div class="questions">
-        <label class="mr-sm-2" for="inlineFormCustomSelect"><b>
-                14. Reponsabilidades trabalhistas</b>
-        </label>
-    </div>
-
-    <div class="answers">
-        <table style="float: left">
-            <tr>
-                <td id="espaco-td">&nbsp</td>
-                <td style="text-align: center;"> <b> Último Exercício - R$ </b> </td>
-            </tr>
-            <tr>
-                <td>A vencer</td>
-                <td>{{$RespTrab1_ant}}</td>
-            </tr>
-            <tr>
-                <td>Vencidas - até 60 dias</td>
-                <td>{{$RespTrab2_ant}}</td>
-            </tr>
-            <tr>
-                <td>Vencidas - há mais de 60 dias</td>
-                <td>{{$RespTrab3_ant}}</td>
-            </tr>
-            <tr>
-                <td>Renegociadas - a vencer</td>
-                <td>{{$RespTrab4_ant}}</td>
-            </tr>
-            <tr>
-                <td>Renegociadas - vencidas até 60 dias</td>
-                <td>{{$RespTrab5_ant}}</td>
-            </tr>
-            <tr>
-                <td>Renegociadas - vencidas há mais de 60 dias</td>
-                <td>{{$RespTrab6_ant}}</td>
-            </tr>
-
-        </table>
-        <div id="space"></div>
-
-        <table style="float: left">
-            <tr>
-                <td style="text-align: center;"><b> Atual - R$ </b> </td>
-            </tr>
-            <tr>
-                <td>{{$RespTrab1}}</td>
-            </tr>
-            <tr>
-                <td>{{$RespTrab2}}</td>
-            </tr>
-            <tr>
-                <td>{{$RespTrab3}}</td>
-            </tr>
-            <tr>
-                <td>{{$RespTrab4}}</td>
-            </tr>
-            <tr>
-                <td>{{$RespTrab5}}</td>
-            </tr>
-            <tr>
-                <td>{{$RespTrab6}}</td>
-            </tr>
-        </table>
-
-
-        <div id="space"></div>
-
-        <table style="float: left">
-            <tr>
-                <td> </td>
-            </tr>
-        </table>
-    </div>
-    <br><br><br><br><br><br><br><br>
-    <!-- 15. Autorização SCR -->
-
-    <div class="questions">
-        15. Autorização para consulta ao sistema de informações de crédito do Bacen (SCR)
-    </div>
-
-    <div class="answers">
-        @if($scr == 0)
-        Sim
-        @else
-        Não
-        @endif
-    </div>
-
-    <!-- 16. Endivadamento SCR -->
-
-    <div class="questions">
-        16. Endividamento no SCR (Fonte: aplicativo Clientes-04)
-    </div>
-
-    <table style="float: left">
-        <tr>
-            <th>A vencer</th>
-            <th>Valor em R$</th>
-        </tr>
-        <tr>
-            <td>Em até 180 dias</td>
-            <td>{{$entVencerSCR1}}</td>
-        </tr>
-        <tr>
-            <td>De 180 a 360 dias</td>
-            <td>{{$entVencerSCR2}}</td>
-        </tr>
-        <tr>
-            <td>Acima de 360 dias</td>
-            <td>{{$entVencerSCR3}}</td>
-        </tr>
-        <tr>
-            <td><b>Total</b></td>
-            <td>{{$entTotVencerSCR}}</td>
-        </tr>
-    </table>
-    <div id="space"></div>
-    <table class="tab-dir">
-        <tr>
-            <th class="valor-tab" style="text-align: center;">Vencidos</th>
-            <th class="valor-tab" style="text-align: center;">Valor em R$</th>
-        </tr>
-        <tr>
-            <td>Até 60 dias</td>
-            <td> {{$entVencidoSCR1}}</td>
-        </tr>
-        <tr>
-            <td>De 61 a 180 dias</td>
-            <td> {{$entVencidoSCR2}}</td>
-        </tr>
-        <tr>
-            <td>De 181 a 360 dias</td>
-            <td> {{$entVencidoSCR3}}</td>
-        </tr>
-        <tr>
-            <td>Acima de 360 dias</td>
-            <td> {{$entVencidoSCR4}}</td>
-        </tr>
-        <tr>
-            <td><b>Total vencido</b></td>
-            <td>{{$entVencidoSCR}}</td>
-        </tr>
-    </table>
-    <br>
-    <table class="tab-dir">
-
-        <tr>
-            <td>Créditos baixados no(s) exercício(s) anterior(es)</td>
-            <td>{{$entBaixSCR}}</td>
-        </tr>
-        <tr>
-            <td>Coobrigações</td>
-            <td>{{$coobrig}}</td>
-        </tr>
-
-    </table>
-
-    <div class="questions">
-        Houve atraso nos últimos 12 meses já regularizados?
-    </div>
-    <div class="answers">
-        @if($atraso == -5)
-        Sim
-        @else
-        Não
-        @endif
-    </div>
-
-    <!-- 17. Análise anterior -->
-
-    <div class="questions">
-        17. Análise anterior do limite de crédito efetuada na Dicre conforme IN 23, com envio de documentação
-    </div>
-
-    <div class="answers">
-        @if($analise === "0.000000001")
-        Sim
-        @else
-        Não, efetuada por meio de planilha
-        @endif
-    </div>
-
-    <!-- 18. Risco anterior -->
-
-    <div class="questions">
-        18. Risco anterior
-    </div>
-
-    <div class="answers">
-        @if($riscAnt === "0.000000001")
-        A
-        @elseif($riscAnt === "0.000000002")
-        B
-        @elseif($riscAnt === "0.000000003")
-        C
-        @elseif($riscAnt === "0.000000004")
-        D
-        @elseif($riscAnt === "0.000000005")
-        E
-        @elseif($riscAnt === "0.000000006")
-        Sem risco anterior
-        @endif
-    </div>
-
-    <!-- 19. Concentração  -->
-
-    <div class="questions">
-        19. Concentração de receitas nos cinco principais clientes/associados/colaboradores/doadores
-    </div>
-
-    <div class="answers">
-        @if($concent === "0.000000001")
-        Menos de 20%
-        @elseif($concent === "0.000000002")
-        De 20 a 49%
-        @elseif($concent === "0.000000003")
-        De 50 a 79%
-        @elseif($concent === "0.000000004")
-        De 80 a 100%
-        @endif
-    </div>
-
-    <!-- 20. Limites vigentes -->
-
-    <div class="questions">
-        20. Limites vigentes
-    </div>
-
-    <div class="elem-esq">Limite vigente:
-        <div class="answers">
-            @if($limVig === "0.000000001")
-            Sim
-            @else
-            Não
-            @endif
-        </div>
-    </div>
-    <table class="elem-esq1" style="float: left">
-        <tr>
-            <td>&nbsp</td>
-            <td style="text-align: center;"> <b> Valor - R$ </b> </td>
-        </tr>
-        <tr>
-            <td>Limite de Crédito</td>
-            <td> {{$entLim}}</td>
-        </tr>
-        <tr>
-            <td>Cheque Ouro Empresarial</td>
-            <td> {{$entCheque}}</td>
-        </tr>
-        <tr>
-            <td>Cartão Empresarial</td>
-            <td> {{$entCartaoEmp}}</td>
-        </tr>
-    </table>
-
-
-    <table>
-        <tr>
-            <td style="text-align: center;"><b> Vencimento</b> </td>
-        </tr>
-
-        <tr>
-            <td>{{$vencAtual}}</td>
-        </tr>
-        <tr>
-            <td>{{$venCheque}}</td>
-        </tr>
-        <tr>
-            <td>{{$venCartao}}</td>
-        </tr>
-    </table>
-    <br><br><br><br>
-    <!-- gambiarra -->
-    <!-- 21. Receita bruta anual nos últimos 3 exercícios -->
-
-    <div class="questions">
-        21. Receita bruta anual nos últimos 3 exercícios
-    </div>
-    <table>
-        <tr>
-            <th class="largura-td" class="valor-tab" style="text-align: center;">Exercício</th>
-            <th class="valor-tab" style="text-align: center;">Valor - R$</th>
-        </tr>
-        <tr>
-            <td> {{$entROB1}} </td>
-        <tr>
-            <td> {{$entROB2}} </td>
-        </tr>
-        <tr>
-            <td> {{$entROB3}} </td>
-        </tr>
-    </table>
-    <br>
-    <table>
-        <tr>
-            <td>Últimos 12 meses</td>
-            <td> {{$entTotROB}}</td>
-        </tr>
-    </table>
-
-    <!-- 22. Dirigentes -->
-
-    <div class="questions">
-        22. Informe a quantidade de dirigentes:
-    </div>
-
-    <div class="answers">
-        @if($dirigente == 1)
-        Um dirigente
-        @else
-        Dois dirigentes
-        @endif
-    </div>
-</div>
+   
+    

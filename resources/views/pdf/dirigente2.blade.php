@@ -1,472 +1,274 @@
-<div class="questions">
-        <label class="mr-sm-2" for="inlineFormCustomSelect"><b>Dados do Dirigente 2</b></label>                        
-</div>
-<div class="answers">
-    <div class="form-group">
-        <label for="dir2">Nome do dirigente
-                <input type="text" class="form-control" id="dir2" size="50"/> 
-        </label>
-        <label for="cpf">CPF
-                <input type="text" class="form-control" id="cpf" maxlength="11"/>
-        </label>
-        <label for="mciDir2">MCI
-                <input type="text" class="form-control" id="mciDir2" maxlength="9" Placeholder="MCI sem dígito"/>
-        </label>
-    </div>            
-    <div class="form-group">
-        <label for="cargo2">Cargo
-                <input type="text" class="form-control" id="cargo2" size="50"/> 
-        </label>
-        <label for="mandato2">Vencimento do mandato
-                <input type="date" class="form-control" id="mandato1" name="mandato2"  Placeholder="dd/mm/aaaa"/>
-        </label>
-        <label for="pesq2">Pesquisa cadastral
-                <input type="date" class="form-control"id="pesq2" name="pesq2"  Placeholder="dd/mm/aaaa"/>
-        </label>
-    </div>                                          
-</div>               
-
-<!-- 1. Anotações cadastrais em ser -->        
-<div class="questions">
-    <label class="mr-sm-2" for="inlineFormCustomSelect"><b>01. Anotações cadastrais em ser</b></label>                        
-</div>
-<div class="answers">
-    <div class="custom-control custom-radio custom-control-inline" style="width: 30%; float:left">
-        <input type="radio" id="anotEmSerDir2-1" name="anotEmSerDir2" value="65" class="custom-control-input"/>
-        <label class="custom-control-label" for="anotEmSerDir2-1">Não possui anotações em ser</label>
-    </div>
-
-    <div class="custom-control custom-radio custom-control-inline" style="width: 60%; float:right">
-        <input type="radio" id="anotEmSerDir2-2" name="anotEmSerDir2" value="0" class="custom-control-input"/>
-        <label class="custom-control-label" for="anotEmSerDir2-2">Possui anotações 
-            restritivas impeditivas relativas flexibilizadas
-        </label>
-    </div>
-
-    <div class="custom-control custom-radio custom-control-inline" style="width: 30%; float:left">
-        <input type="radio" id="anotEmSerDir2-3" name="anotEmSerDir2" value="20" class="custom-control-input"/>
-        <label class="custom-control-label" for="anotEmSerDir2-3">Possui anotações restritivas fracas</label>
-    </div>
-
-    <div class="custom-control custom-radio custom-control-inline" style="width: 60%; float:right">
-        <input type="radio" id="anotEmSerDir2-4" name="anotEmSerDir2" value="-900" class="custom-control-input"/>
-        <label class="custom-control-label" for="anotEmSerDir2-4">Possui anotações restritivas 
-                impeditivas absolutas ou relativas não flexibilizadas 
-        </label>
-    </div>
-    <div class="custom-control custom-radio custom-control-inline" style="width: 30%; float:left">
-        <input type="radio" id="anotEmSerDir2-5" name="anotEmSerDir2" value="10" class="custom-control-input"/>
-        <label class="custom-control-label" for="anotEmSerDir2-5">Possui anotações restritivas fortes</label>                                                
-    </div>
-</div>
-
-<!-- 2. Anotações cadastrais replicadas em ser -->
-
-<div class="questions">
-    <label class="mr-sm-2" for="inlineFormCustomSelect"><b>02. Anotações cadastrais replicadas em ser</b></label>                        
-</div>
-<div class="answers">
-    <div class="custom-control custom-radio custom-control-inline" style="width: 30%; float:left">
-        <input type="radio" id="anotRepDir2-1" name="anotRepDir2" value="65" class="custom-control-input"/>
-        <label class="custom-control-label" for="anotRepDir2-1">
-            Não possui anotações replicadas
-        </label>
-    </div>
-
-    <div class="custom-control custom-radio custom-control-inline" style="width: 60%; float:right">
-        <input type="radio" id="anotRepDir2-2" name="anotRepDir2" value="0" class="custom-control-input"/>
-        <label class="custom-control-label" for="anotRepDir2-2">Possui anotações 
-            replicadas impeditivas relativas flexibilizadas
-        </label>
-    </div>
-
-    <div class="custom-control custom-radio custom-control-inline" style="width: 30%; float:left">
-        <input type="radio" id="anotRepDir2-3" name="anotRepDir2" value="20" class="custom-control-input"/>
-        <label class="custom-control-label" for="anotRepDir2-3">Possui anotações replicadas fracas</label>
-    </div>
-
-    <div class="custom-control custom-radio custom-control-inline" style="width: 60%; float:right">
-        <input type="radio" id="anotRepDir2-4" name="anotRepDir2" value="-900" class="custom-control-input"/>
-        <label class="custom-control-label" for="anotRepDir2-4">Possui anotações replicadas 
-            impeditivas absolutas ou relativas não flexibilizadas
-        </label>
-    </div>
-
-    <div class="custom-control custom-radio custom-control-inline" style="width: 30%; float:left">
-        <input type="radio" id="anotRepDir2-5" name="anotRepDir2" value="10" class="custom-control-input"/>
-        <label class="custom-control-label" for="anotRepDir2-5">Possui anotações replicadas fortes</label>
-    </div>
-
-    <div class="custom-control custom-radio custom-control-inline" style="width: 60%; float:right">
-        <input type="radio" id="anotRepDir2-6" name="anotRepDir2" value="99" class="custom-control-input"/>
-        <label class="custom-control-label" for="anotRepDir2-6">
-            Desconsiderar as anotações replicadas por não impactar no conceito do cliente
-        </label>
-    </div>                                                                
-</div>
-<!-- 3. Histórico de restrições -->
-
-<div class="questions">
-    <label class="mr-sm-2" for="inlineFormCustomSelect"><b>
-        03. Histórico de restrições nos últimos cinco anos</b>
-    </label>                        
-</div>
-
-<div class="answers">
-    <div class="custom-control custom-radio custom-control-inline" style="width: 20%; float:left">
-        <input type="radio" id="histRestDir2" name="histRestDir2" value="-10" class="custom-control-input">
-        <label class="custom-control-label" for="histRestDir2">Impeditiva</label>
-    </div>
-
-    <div class="custom-control custom-radio custom-control-inline" style="width: 20%; float:left">
-        <input type="radio" id="histRestDir2-2" name="histRestDir2" value="-5" class="custom-control-input">
-        <label class="custom-control-label" for="histRestDir2-2">Forte</label>
-    </div>
-
-    <div class="custom-control custom-radio custom-control-inline" style="width: 20%; float:left">
-        <input type="radio" id="histRestDir2-3" name="histRestDir2" value="0" class="custom-control-input">
-        <label class="custom-control-label" for="histRestDir2-3">Fraca</label>
-    </div>
-
-    <div class="custom-control custom-radio custom-control-inline" style="width: 20%; float:left">
-        <input type="radio" id="histRestDir2-4" name="histRestDir2" value="0,0000001" class="custom-control-input">
-        <label class="custom-control-label" for="histRestDir2-4">Sem histórico de restrições</label>
-    </div>                                                                                
-</div>
-
-<!-- 4. Cliente desde -->                
-<div class="questions">
-    <label class="mr-sm-2" for="inlineFormCustomSelect">
-        <b> 04. Cliente desde</b>
-    </label>                        
-</div>
-
-<div class="answers">
-    <div class="custom-control custom-radio custom-control-inline" style="width: 25%; float:left">
-        <input type="radio" id="cliDesdeDir2-1" name="cliDesdeDir2" value="0,000000001" class="custom-control-input">
-        <label class="custom-control-label" for="cliDesdeDir2-1">Menos de 6 meses</label>
-    </div>
-
-    <div class="custom-control custom-radio custom-control-inline" style="width: 25%; float:left">
-        <input type="radio" id="cliDesdeDir2-2" name="cliDesdeDir2" value="0,000000003" class="custom-control-input">
-        <label class="custom-control-label" for="cliDesdeDir2-2">De 2 a menos de 5 anos</label>
-    </div>
-
-    <div class="custom-control custom-radio custom-control-inline" style="width: 40%; float:left">
-        <input type="radio" id="cliDesdeDir2-3" name="cliDesdeDir2" value="0,000000005" class="custom-control-input">
-        <label class="custom-control-label" for="cliDesdeDir2-3">Não correntista</label>
-    </div>
-
-    <div class="custom-control custom-radio custom-control-inline" style="width: 25%; float:left">
-        <input type="radio" id="cliDesdeDir2-4" name="cliDesdeDir2" value="0,000000002" class="custom-control-input">
-        <label class="custom-control-label" for="cliDesdeDir2-4">De 6 meses a menos de 2 anos</label>                        
-    </div>
-
-    <div class="custom-control custom-radio custom-control-inline" style="width: 25%; float:left">
-        <input type="radio" id="cliDesdeDir2-5" name="cliDesdeDir2" value="0,000000004" class="custom-control-input">
-        <label class="custom-control-label" for="cliDesdeDir2-5">Mais de 5 anos</label>                        
-    </div>                
-</div>
-
-<!-- 05. Com relação aos seus empréstimos o dirigente/administrador -->
-
-<div class="questions">
-    <label class="mr-sm-2" for="inlineFormCustomSelect"><b>
-        05. Com relação aos seus empréstimos o dirigente/administrador</b>
-    </label>                        
-</div>
-
-<div class="answers">
-    <div class="custom-control custom-radio custom-control-inline" style="width: 45%; float:left">
-        <input type="radio" id="emprDir2-1" name="emprDir2" value="0,000000001" class="custom-control-input">      
-        <label class="custom-control-label" for="emprDir2-1">Ainda não tomou empréstimos</label>  
-    </div>
-
-    <div class="custom-control custom-radio custom-control-inline" style="width: 45%; float:right">
-        <input type="radio" id="emprDir2-2" name="emprDir2" value="0,000000003" class="custom-control-input">      
-        <label class="custom-control-label" for="emprDir2-2">Negocia taxas, cotando inclusive em outras instituições</label>  
-    </div>
-
-    <div class="custom-control custom-radio custom-control-inline" style="width: 45%; float:left">
-        <input type="radio" id="emprDir2-3" name="emprDir2" value="0,000000002" class="custom-control-input">      
-        <label class="custom-control-label" for="emprDir2-3">Costuma aceitar as taxas oferecidas pelo Banco</label>  
-    </div>
-
-    <div class="custom-control custom-radio custom-control-inline" style="width: 45%; float:right">
-        <input type="radio" id="emprDir2-4" name="emprDir2" value="0,000000004" class="custom-control-input">      
-        <label class="custom-control-label" for="emprDir2-4">Não correntista</label>  
-    </div>                           
-</div>
-
-<!-- 6. Conceito na praça -->
-
-<div class="questions">
-    <label class="mr-sm-2" for="inlineFormCustomSelect"><b>
-        06. Conceito na praça</b>
-    </label>                        
-</div>
-
-<div class="answers">
-
-    <div class="custom-control custom-radio custom-control-inline" style="width: 25%; float:left">
-        <input type="radio" id="conceitoDir2-1" name="conceitoDir2" value="15" class="custom-control-input">
-        <label class="custom-control-label" for="conceitoDir2-1">Bem referido/bem conceituado</label>
-    </div>
-
-    <div class="custom-control custom-radio custom-control-inline" style="width: 25%; float:left">
-        <input type="radio" id="conceitoDir2-2" name="conceitoDir2" value="-900" class="custom-control-input">
-        <label class="custom-control-label" for="conceitoDir2-2">Mal referido/conceituado</label>
-    </div>
-
-    <div class="custom-control custom-radio custom-control-inline" style="width: 20%; float:left">
-        <input type="radio" id="conceitoDir2-3" name="conceitoDir2" value="10" class="custom-control-input">
-        <label class="custom-control-label" for="conceitoDir2-3">Sem conceito firmado</label>
-    </div>
-
-    <div class="custom-control custom-radio custom-control-inline" style="width: 25%; float:left">
-        <input type="radio" id="conceitoDir2-4" name="conceitoDir2" value="0,000000001" class="custom-control-input">
-        <label class="custom-control-label" for="conceitoDir2-4">Informações contraditórias das fontes</label>                        
-    </div>
-
-    <div class="custom-control custom-radio custom-control-inline" style="width: 45%; float:left">
-        <input type="radio" id="conceitoDir2-5" name="conceitoDir2" value="5" class="custom-control-input">
-        <label class="custom-control-label" for="conceitoDir2-5">Desconhecido das fontes</label>                        
-    </div>
-</div>
-
-<!-- 7. Histórico de conta corrente -->
-
-<div class="questions">
-    <label class="mr-sm-2" for="inlineFormCustomSelect"><b>
-        07. Histórico de conta corrente (últimos 6 meses)</b>
-    </label>                        
-</div>
-
-<div class="answers">
-    <div class="custom-control  custom-control-inline" style="width: 45%; float:left">                             
-        <font size="+1" color="blue"><u><b>Devoluções</b></u></font>
-    </div>
-
-    <div class="custom-control  custom-control-inline" style="width: 45%; float:right">  
-        <font size="+1" color="blue"><u><b>Excessos</b></u></font>                                                
-    </div>
-
-    <div class="custom-control custom-radio custom-control-inline" style="width: 45%; float:left">
-        <input type="radio" id="dir2Devol1" name="dir2Devol" value="60" class="custom-control-input">      
-        <label class="custom-control-label" for="dir2Devol1">Sem ocorrência de devoluções</label>  
-    </div>
-
-    <div class="custom-control custom-radio custom-control-inline" style="width: 45%; float:right">
-        <input type="radio" id="dir2Exces1" name="dir2Exces" value="60,000000001" class="custom-control-input">      
-        <label class="custom-control-label" for="dir2Exces1">Sem ocorrência de excessos</label>  
-    </div>
-
-    <div class="custom-control custom-radio custom-control-inline" style="width: 45%; float:left">
-        <input type="radio" id="dir2Devol2" name="dir2Devol" value="15" class="custom-control-input">      
-        <label class="custom-control-label" for="dir2Devol2">Cheques devolvidos raramente (até 2 cheques)</label>  
-    </div>
-
-    <div class="custom-control custom-radio custom-control-inline" style="width: 45%; float:right">
-        <input type="radio" id="dir2Exces2" name="dir2Exces" value="25" class="custom-control-input">      
-        <label class="custom-control-label" for="dir2Exces2">Excessos, raramente (até 6 excessos)</label>  
-    </div>
-
-    <div class="custom-control custom-radio custom-control-inline" style="width: 45%; float:left">
-        <input type="radio" id="dir2Devol3" name="dir2Devol" value="0,000000001" class="custom-control-input">      
-        <label class="custom-control-label" for="dir2Devol3">Cheques devolvidos frequentemente (acima de 2 cheques)</label>  
-    </div>
-    <div class="custom-control custom-radio custom-control-inline" style="width: 45%; float:right">
-        <input type="radio" id="dir2Exces3" name="dir2Exces" value="10" class="custom-control-input">      
-        <label class="custom-control-label" for="dir2Exces3">Excessos, frequentemente (acima de 6 cheques)</label>  
-    </div>
-</div>     
-
-<!-- Talonário Dirigente 2 -->
-<div class="answers">                        
-    <div class="custom-control custom-checkbox custom-control-inline" style="width: 45%; float:left">
-        <input type="checkbox" id="talBloqDir2" name="talBloqDir2" value="0" class="custom-control-input">      
-        <label class="custom-control-label" for="talBloqDir2">Talonário bloqueado</label>  
-    </div>
-
-    <div class="custom-control custom-checkbox custom-control-inline" style="width: 45%; float:right">
-        <input type="checkbox" id="excDir2Check1" name="excDir2Check" value="25,000000001" class="custom-control-input" onclick="verificaCheckbox()">      
-        <label class="custom-control-label" for="excDir2Check1">Cliente novo (considerar ocorrências de devolução ou excessos)</label>  
-    </div>
-
-    <div class="custom-control custom-checkbox custom-control-inline" style="width: 45%; float:right">
-        <input type="checkbox" id="excDir2Check2" name="excDir2Check" value="15" class="custom-control-input" onclick="verificaCheckbox()">      
-        <label class="custom-control-label" for="excDir2Check2">Não correntista</label>  
-    </div>
-</div>
-
-<!-- 8. Utilização de cheque especial -->
-
-<div class="questions">
-    <label class="mr-sm-2" for="inlineFormCustomSelect"><b>
-            08. Utilização de cheque especial (últimos 6 meses)</b>
-    </label>                        
-</div>
-
-<div class="answers">
-
-    <div class="custom-control custom-radio custom-control-inline" style="width: 45%; float:left">
-        <input type="radio" id="chequeDir2-1" name="chequeDir2" value="0,000000001" class="custom-control-input">      
-        <label class="custom-control-label" for="chequeDir2-1">Não possui cheque especial - opção da agência</label>  
-    </div>
-
-    <div class="custom-control custom-radio custom-control-inline" style="width: 45%; float:right">
-        <input type="radio" id="chequeDir2-2" name="chequeDir2" value="0,000000005" class="custom-control-input">      
-        <label class="custom-control-label" for="chequeDir2-2">Utiliza frequentemente o limite de seu cheque especial</label>  
-    </div>
-
-    <div class="custom-control custom-radio custom-control-inline" style="width: 45%; float:left">
-        <input type="radio" id="chequeDir2-3" name="chequeDir2" value="0,000000002" class="custom-control-input">      
-        <label class="custom-control-label" for="chequeDir2-3">Não possui cheque especial - opção do cliente</label>  
-    </div>
-
-    <div class="custom-control custom-radio custom-control-inline" style="width: 45%; float:right">
-        <input type="radio" id="chequeDir2-4" name="chequeDir2" value="0,000000006" class="custom-control-input">      
-        <label class="custom-control-label" for="chequeDir2-4">Excede frequentemente o limite de seu cheque especial</label>  
-    </div>  
-
-    <div class="custom-control custom-radio custom-control-inline" style="width: 45%; float:left">
-        <input type="radio" id="chequeDir2-5" name="chequeDir2" value="0,000000003" class="custom-control-input">      
-        <label class="custom-control-label" for="chequeDir2-5">Nunca utiliza o limite de seu cheque especial</label>  
-    </div>  
-
-    <div class="custom-control custom-radio custom-control-inline" style="width: 45%; float:right">
-        <input type="radio" id="chequeDir2-6" name="chequeDir2" value="0,000000007" class="custom-control-input">      
-        <label class="custom-control-label" for="chequeDir2-6">Não correntista</label>  
-    </div>
-
-    <div class="custom-control custom-radio custom-control-inline" style="width: 45%; float:left">
-        <input type="radio" id="chequeDir2-7" name="chequeDir2" value="0,000000004" class="custom-control-input">      
-        <label class="custom-control-label" for="chequeDir2-7">Utiliza eventualmente o limite de seu cheque especial</label>  
-    </div>
-</div>
-
-<!-- 09. Situação atual das operações -->        
-<div class="questions">
-    <label class="mr-sm-2" for="inlineFormCustomSelect"><b>09. Situação atual das operações</b></label>                        
-</div>
-
-<div class="answers">
-    <div class="custom-control custom-radio custom-control-inline" style="width: 30%; float:left">
-        <input type="radio" id="operDir2-1" name="operDir2" value="40" class="custom-control-input"/>
-        <label class="custom-control-label" for="operDir2-1">Normal</label>
-    </div>
-
-    <div class="custom-control custom-radio custom-control-inline" style="width: 60%; float:right">
-        <input type="radio" id="operDir2-2" name="operDir2" value="15" class="custom-control-input"/>
-        <label class="custom-control-label" for="operDir2-2">Ainda não tomou empréstimos
-        </label>
-    </div>
-
-    <div class="custom-control custom-radio custom-control-inline" style="width: 30%; float:left">
-        <input type="radio" id="operDir2-3" name="operDir2" value="0" class="custom-control-input"/>
-        <label class="custom-control-label" for="operDir2-3">Responsável por composição de dívidas</label>
-    </div>
-
-    <div class="custom-control custom-radio custom-control-inline" style="width: 60%; float:right">
-        <input type="radio" id="operDir2-4" name="operDir2" value="10" class="custom-control-input"/>
-        <label class="custom-control-label" for="operDir2-4">Não correntista 
-        </label>
-    </div>
-
-    <div class="custom-control custom-radio custom-control-inline" style="width: 40%; float:left">
-        <input type="radio" id="operDir2-5" name="operDir2" value="-900" class="custom-control-input"/>
-        <label class="custom-control-label" for="operDir2-5">Responsável por operações em curso anormal</label>                                                
-    </div>                
+<!-- Utilizamos as variáveis de Request que são enviados ao Controller e o retorno da função JS 
+
+Autor: Marcelo Suguiura
+Data da criação: 24/04/2021
+Data da alteração:  -->
+
+
+<!-- cabeçalho -->
+<table>
+    <tr>
+        <td> Nome do Dirigente: {{$dir2}} </td>
+        <td> CPF: {{$cpf2}} </td>
+        <td> MCI: {{$mcidir2}} </td>        
+    </tr>
+    <tr>
+        <td> Cargo: {{$cargo2}} </td>           
+        <td> Vencimento do mandato: {{\Carbon\Carbon::parse($mandato2)->format('d/m/Y')}} </td>           
+    </tr>
+</table>
+
+<div class="container-questions">
+    <table>
+
+        <!-- Perguntas 1 e 2 -->
+        <tr>
+            <td class="questions w50">
+                01. Anotações cadastrais em ser
+            </td>
+            <td class="questions w50">
+                02. Anotações cadastrais replicadas em ser
+            </td>
+        </tr>
+
+        <!-- Respostas das perguntas 1 e 2  -->
+        <tr>
+            <td class="answers">
+                @if($anotEmSerDir2 == 65)
+                    Não possui anotações restritivas
+                @elseif($anotEmSerDir2 == 0)
+                    Possui anotações restritivas impeditivas relativas flexibilizadas
+                @elseif($anotEmSerDir2 == 20)
+                    Possui anotações restritivas fracas
+                @elseif($anotEmSerDir2 == -900)
+                    Possui anotações restritivas impeditivas absolutas ou relativas não flexibilizadas
+                @elseif($anotEmSerDir2 == 10)
+                    Possui anotações restritivas fortes
+                @endif
+            </td>
+            <td class="answers">
+                @if($anotRepDir2 == 65)
+                    Não possui anotações replicadas
+                @elseif($anotRepDir2 == 0)
+                    Possui anotações replicadas impeditivas relativas flexibilizadas
+                @elseif($anotRepDir2 == 20)
+                    Possui anotações replicadas fracas
+                @elseif($anotRepDir2 == -900)
+                    Possui anotações replicadas impeditivas absolutas ou relativas não flexibilizadas
+                @elseif($anotRepDir2 == 10)
+                    Possui anotações replicadas fortes
+                @elseif($anotRepDir2 == 99)
+                    Desconsiderar as anotações replicadas por não impactar no conceito do cliente
+                @endif
+            </td>
+        </tr>
+
+         <!-- Perguntas 3 e 4 -->
+         <tr>
+            <td class="questions w50">
+                03. Histórico de restrições nos últimos cinco anos
+            </td>
+            <td class="questions w50">
+                04. Cliente desde
+            </td>
+        </tr>
+
+        <!-- Repostas das perguntas 3 e 4 -->
+        <tr>
+            <td class="answers">
+                @if($histRestDir2 == -10)
+                    Impeditiva
+                @elseif($histRestDir2 == -5)
+                    Forte
+                @elseif($histRestDir2 == 0)
+                    Fraca
+                @elseif($histRestDir2 === "0.0000001")
+                    Sem histórico de restrições
+                @endif
+            </td>
+            <td class="answers">
+                @if($cliDesdeDir2 === "0.000000001")
+                    Menos de 6 meses
+                @elseif($cliDesdeDir2 === "0.000000003")
+                    De 2 a menos de 5 anos
+                @elseif($cliDesdeDir2 === "0.000000005")
+                    Não correntista
+                @elseif($cliDesdeDir2 === "0.000000002")
+                    De 6 meses a menos de 2 anos
+                @elseif($cliDesdeDir2 === "0.000000004")
+                    Mais de 5 anos               
+                @endif
+            </td>
+        </tr>
+
+         <!-- Perguntas 5 e 6 -->
+         <tr>
+            <td class="questions w50">
+                05. Com relação aos seus empréstimos o dirigente/administrador
+            </td>
+            <td class="questions w50">
+                06. Conceito na praça
+            </td>
+        </tr>
+
+        <!-- Repostas das perguntas 5 e 6 -->
+        <tr>
+            <td class="answers">
+                @if($emprDir2 === "0.000000001")
+                    Ainda não tomou empréstimos
+                @elseif($emprDir2 === "0.000000003")
+                    Negocia taxas, cotando inclusive em outras instituições
+                @elseif($emprDir2 === "0.000000002")
+                    Costuma aceitar as taxas oferecidas pelo Banco
+                @elseif($emprDir2 === "0.000000004")
+                    Não correntista
+                @endif
+            </td>
+            <td class="answers">
+                @if($conceitoDir2 == 15)
+                    Bem referido/bem conceituado
+                @elseif($conceitoDir2 == -900)
+                    Mal referido/conceituado
+                @elseif($conceitoDir2 == 10)
+                    Sem conceito firmado
+                @elseif($conceitoDir2 === "0.000000001")
+                    Informações contraditórias das fontes
+                @elseif($conceitoDir2 == 5)
+                    Desconhecido das fontes               
+                @endif
+            </td>
+        </tr>
+
+         <!-- Pergunta 7 -->
+         <tr>
+            <td class="questions">
+                 07. Histórico de conta corrente (últimos 6 meses)
+            </td>            
+        </tr>
+
+         <!-- Repostas da pergunta 7 devoluções-->
+        <tr>
+            <td class="answers">
+                @if($dir2Devol == 60)
+                    Sem ocorrência de devoluções
+                @elseif($dir2Devol == 15)
+                    Cheques devolvidos raramente (até 2 cheques)
+                @elseif($dir2Devol === "0.000000001")
+                    Cheques devolvidos frequentemente (acima de 2 cheques)
+                @endif                        
+                <span class="space">                    
+                    {{isset($excDir2Check) && ($excDir2Check === 25.000000001 || $excDir2Check === "25.000000001") 
+                    ? "Cliente novo............: Sim" : "Cliente novo............: Não"}}                    
+                </span>
+                <span class="space1"> 
+                    {{isset($excDir2Check) && ($excDir2Check == 15) 
+                    ? "Não correntista: Sim" : "Não correntista: Não"}} 
+                </span>    
+            </td>            
+        </tr>
+            
+         <!-- Repostas da pergunta 7 excessos-->                
+        <tr>
+            <td class="answers">
+                @if($dir2Exces === "60.000000001")
+                    Sem ocorrência de excessos
+                @elseif($dir2Exces == 25)
+                    Excessos, raramente (até 6 excessos)
+                @elseif($dir2Exces == 10)
+                    Excessos, frequentemente (acima de 6 cheques)
+                @endif            
+                <span class="space">
+                    {{isset($talBloqDir2) && ($talBloqDir2 === 0 || $talBloqDir2 === "0") ? "Talonário bloqueado: Sim" : "Talonário bloqueado: Não"}}
+                </span>
+            </td>
+        </tr>
+        
+        <!-- Perguntas 8 e 9 -->
+        <tr>
+            <td class="questions w50">
+                08. Utilização de cheque especial (últimos 6 meses)
+            </td>
+            <td class="questions w50">
+                09. Situação atual das operações
+            </td>
+        </tr>
+
+         <!-- Repostas das perguntas 8 e 9 -->
+         <tr>
+            <td class="answers">
+                @if($chequeDir2 === "0.000000001")
+                    Não possui cheque especial - opção da agência
+                @elseif($chequeDir2 === "0.000000005")
+                    Utiliza frequentemente o limite de seu cheque especial
+                @elseif($chequeDir2 === "0.000000002")
+                    Não possui cheque especial - opção do cliente
+                @elseif($chequeDir2 === "0.000000006")
+                    Excede frequentemente o limite de seu cheque especial
+                @elseif($chequeDir2 === "0.000000003")
+                    Nunca utiliza o limite de seu cheque especial
+                @elseif($chequeDir2 === "0.000000007")
+                    Não correntista
+                @elseif($chequeDir2 === "0.000000004")
+                    Utiliza eventualmente o limite de seu cheque especial    
+                @endif
+            </td>
+            <td class="answers">
+                @if($operDir2 == 40)
+                    Normal
+                @elseif($operDir2 == 15)
+                    Ainda não tomou empréstimos              
+                @elseif($operDir2 == 0)
+                    Responsável por composição de dívidas
+                @elseif($operDir2 == 10)
+                    Não correntista
+                @elseif($operDir2 == -900)
+                    Responsável por operações em curso anormal             
+                @endif
+            </td>
+        </tr>
+
+         <!-- Perguntas 10 e 11 -->
+         <tr>
+            <td class="questions w50">
+                10. Pontualidade no pagamento de empréstimos no Banco nos últimos 3 anos
+            </td>
+            <td class="questions w50">
+                11. Pontualidade - Fontes externas
+            </td>
+        </tr>
+
+         <!-- Repostas das perguntas 10 e 11 -->
+         <tr>
+            <td class="answers">
+                @if($pontualBB_Dir2 == 20)
+                    Não tomou empréstimos
+                @elseif($pontualBB_Dir2 == 0)
+                    Deixou de pagar vários empréstimos no vencimento
+                @elseif($pontualBB_Dir2 == 60)
+                    Pagou todos os empréstimos no vencimento
+                @elseif($pontualBB_Dir2 === "7.000000001")
+                    Não correntista
+                @elseif($pontualBB_Dir2 == 7)
+                    Deixou de pagar algum empréstimo no vencimento                 
+                @endif
+            </td>
+            <td class="answers">
+                @if($pontualExtDir2 == 10)
+                    Pontualidade não apurada
+                @elseif($pontualExtDir2 == 0)
+                    Paga com atrasos (de 16 a 60 dias)           
+                @elseif($pontualExtDir2 == 30)
+                    Pontual
+                @elseif($pontualExtDir2 == -900)
+                    Habitualmente impontual (mais de 60 dias)
+                @elseif($pontualExtDir2 == 15)
+                    Paga com pequenos atrasos (até 15 dias)            
+                @endif
+            </td>
+        </tr>
+
+    </table>                                                                  
 </div>
 
 
-<!-- 10. Pontualidade no pagamento de empréstimos no Banco nos últimos 3 anos -->        
-<div class="questions">
-    <label class="mr-sm-2" for="inlineFormCustomSelect">
-        <b>10. Pontualidade no pagamento de empréstimos no Banco nos últimos 3 anos</b>
-    </label>                        
-</div>
 
-<div class="answers">
-    <div class="custom-control custom-radio custom-control-inline" style="width: 40%; float:left">
-        <input type="radio" id="pontualBB_Dir2-1" name="pontualBB_Dir2" value="20" class="custom-control-input"/>
-        <label class="custom-control-label" for="pontualBB_Dir2-1">
-            Não tomou empréstimos
-        </label>
-    </div>
-
-    <div class="custom-control custom-radio custom-control-inline" style="width: 50%; float:right">
-        <input type="radio" id="pontualBB_Dir2-2" name="pontualBB_Dir2" value="0" class="custom-control-input"/>
-        <label class="custom-control-label" for="pontualBB_Dir2-2">
-            Deixou de pagar vários empréstimos no vencimento
-        </label>
-    </div>
-
-    <div class="custom-control custom-radio custom-control-inline" style="width: 40%; float:left">
-        <input type="radio" id="pontualBB_Dir2-3" name="pontualBB_Dir2" value="60" class="custom-control-input"/>
-        <label class="custom-control-label" for="pontualBB_Dir2-3">
-            Pagou todos os empréstimos no vencimento
-        </label>
-    </div>
-
-    <div class="custom-control custom-radio custom-control-inline" style="width: 50%; float:right">
-        <input type="radio" id="pontualBB_Dir2-4" name="pontualBB_Dir2" value="7,000000001" class="custom-control-input"/>
-        <label class="custom-control-label" for="pontualBB_Dir2-4">
-            Não correntista 
-        </label>
-    </div>
-
-    <div class="custom-control custom-radio custom-control-inline" style="width: 40%; float:left">
-        <input type="radio" id="pontualBB_Dir2-5" name="pontualBB_Dir2" value="7" class="custom-control-input"/>
-        <label class="custom-control-label" for="pontualBB_Dir2-5">
-            Deixou de pagar algum empréstimo no vencimento
-        </label>                                                
-    </div>
-</div>
-
-<!-- 11. Fontes externas -->        
-<div class="questions">
-    <label class="mr-sm-2" for="inlineFormCustomSelect">
-        <b>11. Pontualidade - Fontes externas</b>
-    </label>                        
-</div>
-
-<div class="answers">
-    <div class="custom-control custom-radio custom-control-inline" style="width: 40%; float:left">
-        <input type="radio" id="pontualExtDir2-1" name="pontualExtDir2" value="10" class="custom-control-input"/>
-        <label class="custom-control-label" for="pontualExtDir2-1">
-            Pontualidade não apurada
-        </label>
-    </div>
-
-    <div class="custom-control custom-radio custom-control-inline" style="width: 50%; float:right">
-        <input type="radio" id="pontualExtDir2-2" name="pontualExtDir2" value="0" class="custom-control-input"/>
-        <label class="custom-control-label" for="pontualExtDir2-2">
-            Paga com atrasos (de 16 a 60 dias)
-        </label>
-    </div>
-
-    <div class="custom-control custom-radio custom-control-inline" style="width: 40%; float:left">
-        <input type="radio" id="pontualExtDir2-3" name="pontualExtDir2" value="30" class="custom-control-input"/>
-        <label class="custom-control-label" for="pontualExtDir2-3">
-            Pontual
-        </label>
-    </div>
-
-    <div class="custom-control custom-radio custom-control-inline" style="width: 50%; float:right">
-        <input type="radio" id="pontualExtDir2-4" name="pontualExtDir2" value="-900" class="custom-control-input"/>
-        <label class="custom-control-label" for="pontualExtDir2-4">
-            Habitualmente impontual (mais de 60 dias)
-        </label>
-    </div>
-
-    <div class="custom-control custom-radio custom-control-inline" style="width: 40%; float:left">
-        <input type="radio" id="pontualExtDir2-5" name="pontualExtDir2" value="15" class="custom-control-input"/>
-        <label class="custom-control-label" for="pontualExtDir2-5">
-            Paga com pequenos atrasos (até 15 dias)
-        </label>                                                
-    </div>
-</div>
-
-                
-              

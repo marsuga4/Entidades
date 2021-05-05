@@ -3,6 +3,7 @@
     .pdf .questions {
         font-size : 16px;
         font-weight : bold;
+        color: blue;
     }
 
     /* formatar as respostas */
@@ -16,6 +17,11 @@
         position: absolute;
     }
     
+    /* espaço na questão 7 */
+    .pdf .space1{
+        left: 800px;
+        position: absolute;
+    }
     /* negrito no documento */
     .pdf .bold {
         font-weight : bold; 
@@ -51,14 +57,106 @@
        width: 50%;
    }
 
+   /* largura de 33% para cada td */
+   .pdf .w33{
+       width: 33%;
+   }
+
+    /* largura de 20% para cada td */
+    .pdf .w20{
+       width: 20%;
+   }
+
    /* configurar o tamanho de tela total para a tabela */
    .pdf table{
        width: 100%;
    }
+
+    /* configurar as tabelas da pergunta 16 */
+   .pdf .tab16a {        
+        border: 1px solid black;                   
+        width: 45%;   
+        float:left;
+        margin-left: 5px;
+   }
+
+   .pdf .tab16a td{ 
+        border:1px solid black;
+        
+   }
+
+   .pdf .tab16b{        
+        border: 1px solid black;                    
+        width: 45%;   
+        float:left;
+        margin-left: 5px;
+   }
+   .pdf .tab16b td{ 
+        border:1px solid black;        
+   }
+
+   .pdf .tab16c{        
+        border: 1px solid black;                    
+        width: 45%;   
+        float:left;
+        margin-left: 5px;
+   }
+   .pdf .tab16c td{ 
+        border:1px solid black;        
+   }
+
+   .pdf .tab20{    
+        width: 45%;                                            
+   }
+   .pdf .td_tab20{    
+        border: 1px solid black;                                             
+   }
+
+   .pdf .tab21{    
+        width: 25%;                                            
+   }
+
+   .pdf .nobold{
+       font-weight: normal;
+       margin-left: 1px;
+       color: black;      
+   }
+
+   .pdf h1{
+       color: white;
+       background-color: blue;
+       font-size: 21px;
+   }
+
+   /* estilizar o placeholder */
+   .pdf ::-webkit-input-placeholder {
+    color: red;
+   }
+   
+   
 </style>
 
 <!-- includes das views -->
 <div class="pdf">
     <h1>Dados da Entidade</h1>
-    @include('pdf.entidade') 
+    @include('pdf.entidade')
+
+    @if($dirigente == 1)
+        <h1>Dados do Dirigente/Administrador</h1>
+        @include('pdf.dirigente1')
+    @else
+        <h1>Dados do Dirigente/Administrador 1</h1>
+        @include('pdf.dirigente1')
+        <h1>Dados do Dirigente/Administrador 2</h1>
+        @include('pdf.dirigente2')              
+    @endif           
+    
+    <h1>Faturamento</h1>
+    @include('pdf.faturamento')
+
+    <h1>Risco/Limite de Crédito</h1>
+    @include('pdf.portfolio')
+    
+    
+
 </div>                                                                         

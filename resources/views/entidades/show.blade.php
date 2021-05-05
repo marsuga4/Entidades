@@ -46,7 +46,7 @@
                 Desenvolvedor
         </button>  
         <!-- enviar dados na controller store para o cálculo do modelo                         -->
-        <form method="post" action="{{ route('entidade.store') }}" name="form" id="formulario">                                             
+        <form method="post" action="{{ route('entidade.pdf') }}" name="form" id="formulario">                                             
                 <input type="hidden" name="mci" value="{{$mci}}"/> 
                 <meta name="csrf-token" content="{{ csrf_token() }}">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}"/>  

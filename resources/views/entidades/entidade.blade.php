@@ -486,24 +486,24 @@
 <div class="answers">            
         <table  style="float: left">
                 <tr> <td id="espaco-td">&nbsp</td> <td style="text-align: center;"> <b> Último Exercício - R$ </b> </td> </tr>   
-                <tr> <td>A vencer</td> <td class="valor-tab"><input type="text" style= "text-align: right;"  name="RespForn1_ant" class="format"/></td></tr>
-                <tr> <td>Vencidas - até 60 dias</td> <td class="valor-tab"><input type="text" style= "text-align: right;"  name="RespForn2_ant" class="format"/></td></tr>
-                <tr> <td>Vencidas - há mais de 60 dias</td> <td class="valor-tab"><input type="text" style= "text-align: right;"  name="RespForn3_ant" class="format"/></td></tr>
-                <tr> <td>Renegociadas - a vencer</td> <td class="valor-tab"><input type="text" style= "text-align: right;"  name="RespForn4_ant" class="format"/></td></tr>
-                <tr> <td>Renegociadas - vencidas até 60 dias</td> <td class="valor-tab"><input type="text" style= "text-align: right;"  name="RespForn5_ant" class="format"/></td></tr>
-                <tr> <td>Renegociadas - vencidas há mais de 60 dias</td> <td class="valor-tab"><input type="text" style= "text-align: right;"  name="RespForn6_ant" class="format"/></td></tr>
+                <tr> <td>A vencer</td> <td class="valor-tab"><input type="text" style= "text-align: right;" value="0,00"  name="RespForn1_ant" class="format"/></td></tr>
+                <tr> <td>Vencidas - até 60 dias</td> <td class="valor-tab"><input type="text" style= "text-align: right;" value="0,00"  name="RespForn2_ant" class="format"/></td></tr>
+                <tr> <td>Vencidas - há mais de 60 dias</td> <td class="valor-tab"><input type="text" style= "text-align: right;" value="0,00" name="RespForn3_ant" class="format"/></td></tr>
+                <tr> <td>Renegociadas - a vencer</td> <td class="valor-tab"><input type="text" style= "text-align: right;" value="0,00" name="RespForn4_ant" class="format"/></td></tr>
+                <tr> <td>Renegociadas - vencidas até 60 dias</td> <td class="valor-tab"><input type="text" style= "text-align: right;" value="0,00"  name="RespForn5_ant" class="format"/></td></tr>
+                <tr> <td>Renegociadas - vencidas há mais de 60 dias</td> <td class="valor-tab"><input type="text" style= "text-align: right;" value="0,00" name="RespForn6_ant" class="format"/></td></tr>
                         
         </table>   
         <div id="space"></div>
 
         <table  style="float: left">
                 <tr> <td style="text-align: center;"><b> Atual - R$ </b> </td></tr>   
-                <tr> <td class="valor-tab"><input onkeyup="calcular13()" type="text" style= "text-align: right;" name="RespForn1" id="valor" class="format RespForn"/></td></tr>
-                <tr> <td class="valor-tab"><input onkeyup="calcular13()" type="text" style= "text-align: right;" name="RespForn2" id="valor" class="format RespForn"/></td></tr>
-                <tr> <td class="valor-tab"><input onkeyup="calcular13()" type="text" style= "text-align: right;" name="RespForn3" id="valor" class="format RespForn"/></td></tr>
-                <tr> <td class="valor-tab"><input onkeyup="calcular13()" type="text" style= "text-align: right;" name="RespForn4" id="valor" class="format RespForn"/></td></tr>
-                <tr> <td class="valor-tab"><input onkeyup="calcular13()" type="text" style= "text-align: right;" name="RespForn5" id="valor" class="format RespForn"/></td></tr>
-                <tr> <td class="valor-tab"><input onkeyup="calcular13()" type="text" style= "text-align: right;" name="RespForn6" id="valor" class="format RespForn"/></td></tr>                                
+                <tr> <td class="valor-tab"><input onkeyup="calcular13()" type="text" style= "text-align: right;" value="0,00" name="RespForn1" id="valor" class="format RespForn"/></td></tr>
+                <tr> <td class="valor-tab"><input onkeyup="calcular13()" type="text" style= "text-align: right;" value="0,00" name="RespForn2" id="valor" class="format RespForn"/></td></tr>
+                <tr> <td class="valor-tab"><input onkeyup="calcular13()" type="text" style= "text-align: right;" value="0,00" name="RespForn3" id="valor" class="format RespForn"/></td></tr>
+                <tr> <td class="valor-tab"><input onkeyup="calcular13()" type="text" style= "text-align: right;" value="0,00" name="RespForn4" id="valor" class="format RespForn"/></td></tr>
+                <tr> <td class="valor-tab"><input onkeyup="calcular13()" type="text" style= "text-align: right;" value="0,00" name="RespForn5" id="valor" class="format RespForn"/></td></tr>
+                <tr> <td class="valor-tab"><input onkeyup="calcular13()" type="text" style= "text-align: right;" value="0,00" name="RespForn6" id="valor" class="format RespForn"/></td></tr>                                
         </table>    
                                 
                         
@@ -515,7 +515,8 @@
     </table>  
     <div  style="float: left border=1px solid;">
         <b>Situação:&nbsp</b>   
-        <p id="situacao13"></p>                   
+        <p id="situacao13"></p>      
+        <input type="hidden" name="situacaoTreze" id="situacaoTreze"/>              
     </div>          
 </div>
 
@@ -529,25 +530,25 @@
 
 <div class="answers">            
         <table  style="float: left">
-                <tr> <td id="espaco-td">&nbsp</td> <td style="text-align: center;"> <b> Último Exercício - R$ </b> </td> </tr>   
-                <tr> <td>A vencer</td> <td class="valor-tab"><input type="text" style= "text-align: right;" name="RespTrab1_ant" class="format"/></td></tr>
-                <tr> <td>Vencidas - até 60 dias</td> <td class="valor-tab"><input type="text" style= "text-align: right;" name="RespTrab2_ant" class="format"/></td></tr>
-                <tr> <td>Vencidas - há mais de 60 dias</td> <td class="valor-tab"><input type="text" style= "text-align: right;" name="RespTrab3_ant" class="format"/></td></tr>
-                <tr> <td>Renegociadas - a vencer</td> <td class="valor-tab"><input type="text" style= "text-align: right;" name="RespTrab4_ant" class="format"/></td></tr>
-                <tr> <td>Renegociadas - vencidas até 60 dias</td> <td class="valor-tab"><input type="text" style= "text-align: right;" name="RespTrab5_ant" class="format"/></td></tr>
-                <tr> <td>Renegociadas - vencidas há mais de 60 dias</td> <td class="valor-tab"><input type="text" style= "text-align: right;" name="RespTrab6_ant" class="format"/></td></tr>
+                <tr> <td id="espaco-td">&nbsp</td> <td style="text-align: center;">  <b> Último Exercício - R$ </b> </td> </tr>   
+                <tr> <td>A vencer</td> <td class="valor-tab"><input type="text" style= "text-align: right;" value="0,00" name="RespTrab1_ant" class="format"/></td></tr>
+                <tr> <td>Vencidas - até 60 dias</td> <td class="valor-tab"><input type="text" style= "text-align: right;" value="0,00" name="RespTrab2_ant" class="format"/></td></tr>
+                <tr> <td>Vencidas - há mais de 60 dias</td> <td class="valor-tab"><input type="text" style= "text-align: right;" value="0,00" name="RespTrab3_ant" class="format"/></td></tr>
+                <tr> <td>Renegociadas - a vencer</td> <td class="valor-tab"><input type="text" style= "text-align: right;" value="0,00" name="RespTrab4_ant" class="format"/></td></tr>
+                <tr> <td>Renegociadas - vencidas até 60 dias</td> <td class="valor-tab"><input type="text" style= "text-align: right;" value="0,00" name="RespTrab5_ant" class="format"/></td></tr>
+                <tr> <td>Renegociadas - vencidas há mais de 60 dias</td> <td class="valor-tab"><input type="text" style= "text-align: right;" value="0,00"  name="RespTrab6_ant" class="format"/></td></tr>
                         
         </table>   
         <div id="space"></div>
 
         <table  style="float: left">
                 <tr> <td style="text-align: center;"><b> Atual - R$ </b> </td></tr>   
-                <tr> <td class="valor-tab"><input onkeyup="calcular14()" type="text" style= "text-align: right;" name="RespTrab1" id="valor" class="format RespTrab"/></td></tr>
-                <tr> <td class="valor-tab"><input onkeyup="calcular14()" type="text" style= "text-align: right;" name="RespTrab2" id="valor" class="format RespTrab"/></td></tr>
-                <tr> <td class="valor-tab"><input onkeyup="calcular14()" type="text" style= "text-align: right;" name="RespTrab3" id="valor" class="format RespTrab"/></td></tr>
-                <tr> <td class="valor-tab"><input onkeyup="calcular14()" type="text" style= "text-align: right;" name="RespTrab4" id="valor" class="format RespTrab"/></td></tr>
-                <tr> <td class="valor-tab"><input onkeyup="calcular14()" type="text" style= "text-align: right;" name="RespTrab5" id="valor" class="format RespTrab"/></td></tr>
-                <tr> <td class="valor-tab"><input onkeyup="calcular14()" type="text" style= "text-align: right;" name="RespTrab6" id="valor" class="format RespTrab"/></td></tr>                                
+                <tr> <td class="valor-tab"><input onkeyup="calcular14()" type="text" style= "text-align: right;" value="0,00" name="RespTrab1" id="valor" class="format RespTrab"/></td></tr>
+                <tr> <td class="valor-tab"><input onkeyup="calcular14()" type="text" style= "text-align: right;" value="0,00" name="RespTrab2" id="valor" class="format RespTrab"/></td></tr>
+                <tr> <td class="valor-tab"><input onkeyup="calcular14()" type="text" style= "text-align: right;" value="0,00" name="RespTrab3" id="valor" class="format RespTrab"/></td></tr>
+                <tr> <td class="valor-tab"><input onkeyup="calcular14()" type="text" style= "text-align: right;" value="0,00" name="RespTrab4" id="valor" class="format RespTrab"/></td></tr>
+                <tr> <td class="valor-tab"><input onkeyup="calcular14()" type="text" style= "text-align: right;" value="0,00" name="RespTrab5" id="valor" class="format RespTrab"/></td></tr>
+                <tr> <td class="valor-tab"><input onkeyup="calcular14()" type="text" style= "text-align: right;" value="0,00" name="RespTrab6" id="valor" class="format RespTrab"/></td></tr>                                
         </table>    
                                 
                         
@@ -559,7 +560,8 @@
         </table>  
         <div  style="float: left border=1px solid;">
                 <b>Situação:&nbsp</b> 
-                <p id="situacao14"></p>                    
+                <p id="situacao14"></p>     
+                <input type="hidden" name="situacaoCatorze" id="situacaoCatorze"/>                
         </div>          
 </div>
 
@@ -831,14 +833,14 @@
                 <th class="valor-tab" style="text-align: center;">Valor - R$</th>                        
         </tr>
         <tr>                        
-                <td class="largura-td" class="valor-tab"><input type="text" style= "text-align: center;" Placeholder="2017"/></td>
+                <td class="largura-td" class="valor-tab rob"><input type="text" maxlength="4" pattern="([0-9]{4})" style= "text-align: center;" id="exerc1" name="exerc1" placeholder="Preencha o ano (AAAA)"></td>
                 <td class="valor-tab"><input  type="text" style= "text-align: right;" name = "entROB1" id="valor" class="format"/></td>                                                                                
         <tr>                        
-                <td class="largura-td" class="valor-tab"><input type="text" style= "text-align: center;" Placeholder="2018"/></td>
+                <td class="largura-td" class="valor-tab rob"><input type="text"  style= "text-align: center;" id="exerc2" name="exerc2" placeholder="Preencha o ano (AAAA)"></td>
                 <td class="valor-tab"><input  type="text" style= "text-align: right;" name = "entROB2" id="valor" class="format"/></td>
         </tr>  
         <tr>                        
-                <td class="largura-td" class="valor-tab"><input type="text" style= "text-align: center;" Placeholder="2019" /></td>
+                <td class="largura-td" class="valor-tab rob"><input type="text"  style= "text-align: center;" id="exerc3" name="exerc3"placeholder="Preencha o ano (AAAA)"></td>
                 <td class="valor-tab"><input  type="text" style= "text-align: right;" name = "entROB3" id="valor" class="format"/></td>
         </tr>                                  
 </table>

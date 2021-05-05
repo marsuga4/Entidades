@@ -4,21 +4,21 @@
 <div class="answers">
     <div class="form-group">
         <label for="dir2">Nome do dirigente
-                <input type="text" class="form-control" id="dir2" size="50"/> 
+                <input type="text" class="form-control" id="dir2" name="dir2" size="50"/> 
         </label>
         <label for="cpf">CPF
-                <input type="text" class="form-control" id="cpf" maxlength="11"/>
+                <input type="text" class="form-control" id="cpf2" name="cpf2" maxlength="11"/>
         </label>
         <label for="mciDir2">MCI
-                <input type="text" class="form-control" id="mciDir2" maxlength="9" Placeholder="MCI sem dígito"/>
+                <input type="text" class="form-control" id="mciDir2" name="mcidir2" maxlength="9" Placeholder="MCI sem dígito"/>
         </label>
     </div>            
     <div class="form-group">
         <label for="cargo2">Cargo
-                <input type="text" class="form-control" id="cargo2" size="50"/> 
+                <input type="text" class="form-control" id="cargo2" name="cargo2" size="50"/> 
         </label>
         <label for="mandato2">Vencimento do mandato
-                <input type="date" class="form-control" id="mandato1" name="mandato2"  Placeholder="dd/mm/aaaa"/>
+                <input type="date" class="form-control" id="mandato2" name="mandato2"  Placeholder="dd/mm/aaaa"/>
         </label>
         <label for="pesq2">Pesquisa cadastral
                 <input type="date" class="form-control"id="pesq2" name="pesq2"  Placeholder="dd/mm/aaaa"/>
@@ -129,7 +129,7 @@
     </div>
 
     <div class="custom-control custom-radio custom-control-inline" style="width: 20%; float:left">
-        <input type="radio" id="histRestDir2-4" name="histRestDir2" value="0,0000001" class="custom-control-input">
+        <input type="radio" id="histRestDir2-4" name="histRestDir2" value="0.0000001" class="custom-control-input">
         <label class="custom-control-label" for="histRestDir2-4">Sem histórico de restrições</label>
     </div>                                                                                
 </div>
@@ -143,27 +143,27 @@
 
 <div class="answers">
     <div class="custom-control custom-radio custom-control-inline" style="width: 25%; float:left">
-        <input type="radio" id="cliDesdeDir2-1" name="cliDesdeDir2" value="0,000000001" class="custom-control-input">
+        <input type="radio" id="cliDesdeDir2-1" name="cliDesdeDir2" value="0.000000001" class="custom-control-input">
         <label class="custom-control-label" for="cliDesdeDir2-1">Menos de 6 meses</label>
     </div>
 
     <div class="custom-control custom-radio custom-control-inline" style="width: 25%; float:left">
-        <input type="radio" id="cliDesdeDir2-2" name="cliDesdeDir2" value="0,000000003" class="custom-control-input">
+        <input type="radio" id="cliDesdeDir2-2" name="cliDesdeDir2" value="0.000000003" class="custom-control-input">
         <label class="custom-control-label" for="cliDesdeDir2-2">De 2 a menos de 5 anos</label>
     </div>
 
     <div class="custom-control custom-radio custom-control-inline" style="width: 40%; float:left">
-        <input type="radio" id="cliDesdeDir2-3" name="cliDesdeDir2" value="0,000000005" class="custom-control-input">
+        <input type="radio" id="cliDesdeDir2-3" name="cliDesdeDir2" value="0.000000005" class="custom-control-input">
         <label class="custom-control-label" for="cliDesdeDir2-3">Não correntista</label>
     </div>
 
     <div class="custom-control custom-radio custom-control-inline" style="width: 25%; float:left">
-        <input type="radio" id="cliDesdeDir2-4" name="cliDesdeDir2" value="0,000000002" class="custom-control-input">
+        <input type="radio" id="cliDesdeDir2-4" name="cliDesdeDir2" value="0.000000002" class="custom-control-input">
         <label class="custom-control-label" for="cliDesdeDir2-4">De 6 meses a menos de 2 anos</label>                        
     </div>
 
     <div class="custom-control custom-radio custom-control-inline" style="width: 25%; float:left">
-        <input type="radio" id="cliDesdeDir2-5" name="cliDesdeDir2" value="0,000000004" class="custom-control-input">
+        <input type="radio" id="cliDesdeDir2-5" name="cliDesdeDir2" value="0.000000004" class="custom-control-input">
         <label class="custom-control-label" for="cliDesdeDir2-5">Mais de 5 anos</label>                        
     </div>                
 </div>
@@ -178,22 +178,22 @@
 
 <div class="answers">
     <div class="custom-control custom-radio custom-control-inline" style="width: 45%; float:left">
-        <input type="radio" id="emprDir2-1" name="emprDir2" value="0,000000001" class="custom-control-input">      
+        <input type="radio" id="emprDir2-1" name="emprDir2" value="0.000000001" class="custom-control-input">      
         <label class="custom-control-label" for="emprDir2-1">Ainda não tomou empréstimos</label>  
     </div>
 
     <div class="custom-control custom-radio custom-control-inline" style="width: 45%; float:right">
-        <input type="radio" id="emprDir2-2" name="emprDir2" value="0,000000003" class="custom-control-input">      
+        <input type="radio" id="emprDir2-2" name="emprDir2" value="0.000000003" class="custom-control-input">      
         <label class="custom-control-label" for="emprDir2-2">Negocia taxas, cotando inclusive em outras instituições</label>  
     </div>
 
     <div class="custom-control custom-radio custom-control-inline" style="width: 45%; float:left">
-        <input type="radio" id="emprDir2-3" name="emprDir2" value="0,000000002" class="custom-control-input">      
+        <input type="radio" id="emprDir2-3" name="emprDir2" value="0.000000002" class="custom-control-input">      
         <label class="custom-control-label" for="emprDir2-3">Costuma aceitar as taxas oferecidas pelo Banco</label>  
     </div>
 
     <div class="custom-control custom-radio custom-control-inline" style="width: 45%; float:right">
-        <input type="radio" id="emprDir2-4" name="emprDir2" value="0,000000004" class="custom-control-input">      
+        <input type="radio" id="emprDir2-4" name="emprDir2" value="0.000000004" class="custom-control-input">      
         <label class="custom-control-label" for="emprDir2-4">Não correntista</label>  
     </div>                           
 </div>
@@ -224,7 +224,7 @@
     </div>
 
     <div class="custom-control custom-radio custom-control-inline" style="width: 25%; float:left">
-        <input type="radio" id="conceitoDir2-4" name="conceitoDir2" value="0,000000001" class="custom-control-input">
+        <input type="radio" id="conceitoDir2-4" name="conceitoDir2" value="0.000000001" class="custom-control-input">
         <label class="custom-control-label" for="conceitoDir2-4">Informações contraditórias das fontes</label>                        
     </div>
 
@@ -257,7 +257,7 @@
     </div>
 
     <div class="custom-control custom-radio custom-control-inline" style="width: 45%; float:right">
-        <input type="radio" id="dir2Exces1" name="dir2Exces" value="60,000000001" class="custom-control-input">      
+        <input type="radio" id="dir2Exces1" name="dir2Exces" value="60.000000001" class="custom-control-input">      
         <label class="custom-control-label" for="dir2Exces1">Sem ocorrência de excessos</label>  
     </div>
 
@@ -272,7 +272,7 @@
     </div>
 
     <div class="custom-control custom-radio custom-control-inline" style="width: 45%; float:left">
-        <input type="radio" id="dir2Devol3" name="dir2Devol" value="0,000000001" class="custom-control-input">      
+        <input type="radio" id="dir2Devol3" name="dir2Devol" value="0.000000001" class="custom-control-input">      
         <label class="custom-control-label" for="dir2Devol3">Cheques devolvidos frequentemente (acima de 2 cheques)</label>  
     </div>
     <div class="custom-control custom-radio custom-control-inline" style="width: 45%; float:right">
@@ -289,7 +289,7 @@
     </div>
 
     <div class="custom-control custom-checkbox custom-control-inline" style="width: 45%; float:right">
-        <input type="checkbox" id="excDir2Check1" name="excDir2Check" value="25,000000001" class="custom-control-input" onclick="verificaCheckbox()">      
+        <input type="checkbox" id="excDir2Check1" name="excDir2Check" value="25.000000001" class="custom-control-input" onclick="verificaCheckbox()">      
         <label class="custom-control-label" for="excDir2Check1">Cliente novo (considerar ocorrências de devolução ou excessos)</label>  
     </div>
 
@@ -310,37 +310,37 @@
 <div class="answers">
 
     <div class="custom-control custom-radio custom-control-inline" style="width: 45%; float:left">
-        <input type="radio" id="chequeDir2-1" name="chequeDir2" value="0,000000001" class="custom-control-input">      
+        <input type="radio" id="chequeDir2-1" name="chequeDir2" value="0.000000001" class="custom-control-input">      
         <label class="custom-control-label" for="chequeDir2-1">Não possui cheque especial - opção da agência</label>  
     </div>
 
     <div class="custom-control custom-radio custom-control-inline" style="width: 45%; float:right">
-        <input type="radio" id="chequeDir2-2" name="chequeDir2" value="0,000000005" class="custom-control-input">      
+        <input type="radio" id="chequeDir2-2" name="chequeDir2" value="0.000000005" class="custom-control-input">      
         <label class="custom-control-label" for="chequeDir2-2">Utiliza frequentemente o limite de seu cheque especial</label>  
     </div>
 
     <div class="custom-control custom-radio custom-control-inline" style="width: 45%; float:left">
-        <input type="radio" id="chequeDir2-3" name="chequeDir2" value="0,000000002" class="custom-control-input">      
+        <input type="radio" id="chequeDir2-3" name="chequeDir2" value="0.000000002" class="custom-control-input">      
         <label class="custom-control-label" for="chequeDir2-3">Não possui cheque especial - opção do cliente</label>  
     </div>
 
     <div class="custom-control custom-radio custom-control-inline" style="width: 45%; float:right">
-        <input type="radio" id="chequeDir2-4" name="chequeDir2" value="0,000000006" class="custom-control-input">      
+        <input type="radio" id="chequeDir2-4" name="chequeDir2" value="0.000000006" class="custom-control-input">      
         <label class="custom-control-label" for="chequeDir2-4">Excede frequentemente o limite de seu cheque especial</label>  
     </div>  
 
     <div class="custom-control custom-radio custom-control-inline" style="width: 45%; float:left">
-        <input type="radio" id="chequeDir2-5" name="chequeDir2" value="0,000000003" class="custom-control-input">      
+        <input type="radio" id="chequeDir2-5" name="chequeDir2" value="0.000000003" class="custom-control-input">      
         <label class="custom-control-label" for="chequeDir2-5">Nunca utiliza o limite de seu cheque especial</label>  
     </div>  
 
     <div class="custom-control custom-radio custom-control-inline" style="width: 45%; float:right">
-        <input type="radio" id="chequeDir2-6" name="chequeDir2" value="0,000000007" class="custom-control-input">      
+        <input type="radio" id="chequeDir2-6" name="chequeDir2" value="0.000000007" class="custom-control-input">      
         <label class="custom-control-label" for="chequeDir2-6">Não correntista</label>  
     </div>
 
     <div class="custom-control custom-radio custom-control-inline" style="width: 45%; float:left">
-        <input type="radio" id="chequeDir2-7" name="chequeDir2" value="0,000000004" class="custom-control-input">      
+        <input type="radio" id="chequeDir2-7" name="chequeDir2" value="0.000000004" class="custom-control-input">      
         <label class="custom-control-label" for="chequeDir2-7">Utiliza eventualmente o limite de seu cheque especial</label>  
     </div>
 </div>
@@ -410,7 +410,7 @@
     </div>
 
     <div class="custom-control custom-radio custom-control-inline" style="width: 50%; float:right">
-        <input type="radio" id="pontualBB_Dir2-4" name="pontualBB_Dir2" value="7,000000001" class="custom-control-input"/>
+        <input type="radio" id="pontualBB_Dir2-4" name="pontualBB_Dir2" value="7.000000001" class="custom-control-input"/>
         <label class="custom-control-label" for="pontualBB_Dir2-4">
             Não correntista 
         </label>

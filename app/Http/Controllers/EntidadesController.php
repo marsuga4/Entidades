@@ -29,7 +29,7 @@
 	   	public function show(Request $request){					 	
 			$mci = $request->get('mci');
 			$limFinal = ($request->has('limFinal'))?$request->get('limFinal'):null;
-			$risco1 = ($request->has('risco1'))?$request->get('risco1'):null;
+			$risco1 = ($request->has('risco1'))?$request->get('risco1'):null;			
 			$risco2 = ($request->has('risco2'))?$request->get('risco2'):null;
 			
 			
@@ -74,6 +74,7 @@
 		$entTempAtv = $request->tempAtv;
 		$entCliDes = intval($request->cliDes);
 		$entConceito = $request->conceito;
+			
 
 		//devoluções e talonário bloqueado
 		$entDevol = $request->devol;
@@ -260,34 +261,7 @@
 		$somaEntRespTrab = $entRespTrab2 + $entRespTrab3 + $entRespTrab5 + $entRespTrab6;
 		$somaEntSCR = $entTotVencidoSCR + $entCredBaixSCR; 
 		
-		// echo "Questão 1 ".$entAnotSer."<br>";		
-		// echo "Questão 2 ".$entAnotRep."<br>";
-		// echo "Questão 3 ".$entHistRest."<br>";
-		// echo "Questão 4 ".$entTempAtv."<br>";
-		// echo "Questão 5 ".$entCliDes."<br>";
-		// echo "Questão 6 ".$entConceito."<br>";
-		// echo "Questão 7A ".$entFinal_7a."<br>";
-		// echo "Questão 7B ".$entFinal_7b."<br>";	
-		// echo "Questão 8 ".$entCheque."<br>";
-		// echo "Questão 9 ".$entOpr."<br>";
-		// echo "Questão 10 ".$entPontBB."<br>";
-		// echo "Questão 11 ".$entPontExt."<br>";
-		// echo "Questão 12 ".$entPont12."<br>";
-		// echo "Questão 13 ".$entPont13."<br>";
-		// echo "Questão 14 ".$entPont14."<br>";
-		// echo "Questão 15 ".$entScr."<br>";		
-		// echo "Questão 16 ".$entAtraso."<br>";
-		// echo "Questão 17 ".$entNatJur."<br>";
-		// echo "Questão 18 ".$entAnalise."<br>";
-		// echo "Questão 19 ".$entAtvd."<br>";
-		// echo "Questão 20 ".$entRiscAnt."<br>";
-		// echo "Questão 21 ".$entConcent."<br>";
-		// echo "Questão 22 ".$entLimVig."<br>";
-		// echo "fiscais ".$somaEntFiscaisPrev."<br>";
-		// echo "fornec ".$somaEntFornec."<br>";
-		// echo "trabalhistas ".$somaEntRespTrab."<br>";
-		// echo "scr ".$somaEntSCR."<br>";	
-		
+			
 		/////////////////////////////////////////////////////////////////////////////////////////////////
 		/////////////////////////receber dados do Dirigente 1////////////////////////////////////////////
 		/////////////////////////////////////////////////////////////////////////////////////////////////
@@ -372,25 +346,7 @@
 		$dir1PontualBB = $request->pontualBB_Dir1;
 		$dir1PontualExt = $request->pontualExtDir1;
 
-	   	// echo "Anotação em ser: var_dump($dir1AnotSer)"."<br>";
-		// echo "Anotação replicada: var_dump($dir1AnotRep)"."<br>";
-		// echo "Hist restr: var_dump($dir1HistRestr)"."<br>";
-		// echo "Cli desde: var_dump($dir1CliDesd)"."<br>";		
-		// echo "Empréstimos: var_dump($dir1Empres)"."<br>";
-		// echo "conceito: var_dump($dir1Conceito)"."<br>";
-	   
-				   
-	   	// echo "Devoluções: var_dump($dir1Dev)"."<br>";
-		// echo "7A parte 2: var_dump($dir1_7a)"."<br>";
-		// echo "Pontuação final 7A: var_dump($dir1Final7a)"."<br>";
-		// echo "Excessos: var_dump($dir1Exces)"."<br>";
-		// echo "Check: var_dump($dir1ExcesCheck)"."<br>";
-		// echo "7B parte 2: var_dump($dir1_7b)"."<br>";		
-		// echo "Pontuação final 7B: var_dump($dir1Final7b)"."<br>";
-
-		
-
-
+	   	
 
 		/////////////////////////////////////////////////////////////////////////////////////////////////
 		/////////////////////////receber dados do Dirigente 2////////////////////////////////////////////
@@ -471,22 +427,7 @@
 	   $dir2PontualBB = $request->pontualBB_Dir2;
 	   $dir2PontualExt = $request->pontualExtDir2;
 
-		//    echo "Anotação em ser: var_dump($dir2AnotSer)"."<br>";
-		//    echo "Anotação replicada: var_dump($dir2AnotRep)"."<br>";
-		//    echo "Hist restr: var_dump($dir2HistRestr)"."<br>";
-		//    echo "Cli desde: var_dump($dir2CliDesd)"."<br>";		
-		//    echo "Empréstimos: var_dump($dir2Empres)"."<br>";
-		//    echo "conceito: var_dump($dir2Conceito)"."<br>";
-		
-					
-		//    echo "Devoluções: var_dump($dir2Dev)"."<br>";
-		//    echo "7A parte 2: var_dump($dir2_7a)"."<br>";
-		//    echo "Pontuação final 7A: var_dump($dir2Final7a)"."<br>";
-		//    echo "Excessos: var_dump($dir2Exces)"."<br>";
-		//    echo "Check: var_dump($dir2ExcesCheck)"."<br>";
-		//    echo "7B parte 2: var_dump($dir2_7b)"."<br>";		
-		//    echo "Pontuação final 7B: var_dump($dir2Final7b)"."<br>";
-
+	
 					/////////////////////////////////////////////////////////////////////////////////////////////////
 					//////////////////////////////////////////Metodologia////////////////////////////////////////////
 					////////////////////////////////////////////////////////////////////////////////////////////////   
@@ -1000,7 +941,7 @@
 		} else {
 			$risco2 = "AAA";
 		} 
-
+		
 		
 		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		///////////////////////////////ROB - E35//////////////////////////////////////////////////////////////////////////////////////////
@@ -1299,6 +1240,23 @@
 		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		/////////////////////Cheque Ouro Empresarial AC75 - Cartão Empresarial AC81///////////////////////////////////////////////////////
 		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		// Capturar o risco anterior
+		// $portfRiscAnt = $request->portfRiscAnt;	
+
+		// Capturar o limite anterior
+		// $portfLimAnt = $request->portfLimAnt;
+		
+		// Capturar o vencimento atual
+		// $entLim = $request->entLim;
+
+		// Capturar o risco atribuído
+		$inputRisco1 = $request->risco1;
+	
+		// Capturar o risco atribuído FEI
+		// $inputRisco2 = $request->inputRisco2;
+
+
+		
 		// Capturar o valor calculado do cheque ouro
 		$calcChequeOur = floatval($request->calcChequeOur);	
 		
@@ -1345,8 +1303,10 @@
 			$auxCartaoEmp = $calcSemGar;
 			
 		}
-		//dd($request->all());
-		return view('pdf.pdf', $request->all());
+		
+		
+		//return view('pdf.pdf', array_merge($request->all(),['inputRisco1'=>$risco1,'inputRisco2'=>$risco2,
+		//'inputLimCalculado' =>$limCalc]));
 	
 		// dados que são retornados para o show				
 		return json_encode(['limFinal'=> $limFinal, 'mci'=> $mci, 'risco1'=>$risco1, 'risco2'=>$risco2,
@@ -1518,4 +1478,10 @@
 
 	}
 
+	public function pdf (Request $request){
+		return view('pdf.pdf', $request->all());
 	}
+
+}
+
+	

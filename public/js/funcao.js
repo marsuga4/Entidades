@@ -10,7 +10,8 @@ $(document).ready(function(){
 
 //Máscara para o CPF
 $(document).ready(function(){
-    $("#cpf").mask("999.999.999-99");
+    $("#cpf1").mask("999.999.999-99");
+    $("#cpf2").mask("999.999.999-99");
 });
 
 //habilitar as abas de dirigentes sempre que forem clicadas
@@ -39,17 +40,6 @@ $(document).ready(function(){
     });    
 });
 
-// $(document).ready(function(){
-//     $("#dirigente1Btn").click(function(){
-//         $("#dirigente1Toggle").toggle();
-//         $("#entidadesToggle").hide();
-//         $("#dirigente2Toggle").hide();
-//         $("#portfolioToggle").hide();
-//         $("#parecerToggle").hide();
- 
-//     });    
-//  });
-
 
 $(document).ready(function(){
    $("#dirigente2Btn").click(function(){
@@ -63,16 +53,6 @@ $(document).ready(function(){
 });
 
 
-// $(document).ready(function(){
-//    $("#portfolioBtn").click(function(){
-//        $("#portfolioToggle").toggle();
-//        $("#entidadesToggle").hide();
-//        $("#dirigente1Toggle").hide();
-//        $("#dirigente2Toggle").hide();
-//        $("#parecerToggle").hide();
-
-//    });    
-// });
 
 $(document).ready(function(){
    $("#parecerBtn").click(function(){
@@ -115,6 +95,11 @@ $(document).ready(function(){
         $('#concent3').attr('checked', true);
         $('#limVig1').attr('checked', true);
         $('#dirigente1').attr('checked', true);
+        $("input[name=dir1]").val('Marcelo');
+        $("input[name=cpf1]").val('233.333.333-60');
+        $("input[name=mci1]").val('999999999');
+        $("input[name=cargo1]").val('Diretor');
+        $("input[name=mandato1]").val('13/05/2029');
 
         $('#anotEmSerDir1-1').attr('checked', true);
         $('#anotRepDir1-1').attr('checked', true);
@@ -174,29 +159,37 @@ function calcular12() {
 		}
 	}
 	if (!Number.isNaN(Number(elements[6]))) {
-		if (Number(elements[6]) >= 0) {                       
+		if (Number(elements[6]) >= 0) {            
+            //passa o texto para a tela entidade.entidade               
             document.getElementById("situacao12").innerHTML = "Em dia.";  
+             //passa o texto para a tela pdf.entidade  
             document.getElementById("situacaoDoze").value = "Em dia.";        
         } 
     }
     
     if ((!Number.isNaN(Number(elements[7]))) || (!Number.isNaN(Number(elements[8])))) {
-		if ((Number(elements[7]) > 0) || (Number(elements[8]) > 0))  {           
+		if ((Number(elements[7]) > 0) || (Number(elements[8]) > 0))  {      
+            //passa o texto para a tela entidade.entidade         
 			document.getElementById("situacao12").innerHTML = "Em atraso.";
+             //passa o texto para a tela pdf.entidade  
             document.getElementById("situacaoDoze").value = "Em atraso.";
         } 
     }
   
     if (!Number.isNaN(Number(elements[9]))) {
-		if ((Number(elements[9]) > 0) && (Number(elements[7]) <= 0) && (Number(elements[8]) <= 0))  {                   
-            document.getElementById("situacao12").innerHTML = "Renegociadas.";    
+		if ((Number(elements[9]) > 0) && (Number(elements[7]) <= 0) && (Number(elements[8]) <= 0))  {   
+            //passa o texto para a tela entidade.entidade                    
+            document.getElementById("situacao12").innerHTML = "Renegociadas.";   
+            //passa o texto para a tela pdf.entidade   
             document.getElementById("situacaoDoze").value = "Renegociadas.";        
         } 
     }
 
     if ((!Number.isNaN(Number(elements[10]))) || (!Number.isNaN(Number(elements[11])))) {
-		if ((Number(elements[10]) > 0) || (Number(elements[11]) > 0))  {                
+		if ((Number(elements[10]) > 0) || (Number(elements[11]) > 0))  {   
+            //passa o texto para a tela entidade.entidade                 
 			document.getElementById("situacao12").innerHTML = "Reneg em atraso.";
+            //passa o texto para a tela pdf.entidade  
             document.getElementById("situacaoDoze").value = "Reneg em atraso.";
         } 
     } 
@@ -218,28 +211,40 @@ function calcular13() {
 		}
 	}
 	if (!Number.isNaN(Number(elements[6]))) {
-		if (Number(elements[6]) >= 0) {           
+		if (Number(elements[6]) >= 0) {        
+            //passa o texto para a tela entidade.entidade     
 			document.getElementById("situacao13").innerHTML = "Em dia.";
+            //passa o texto para a tela pdf.entidade  
+            document.getElementById("situacaoTreze").value = "Em dia."; 
         } 
     }
 
       
     if ((!Number.isNaN(Number(elements[7]))) || (!Number.isNaN(Number(elements[8])))) {
-		if ((Number(elements[7]) > 0) || (Number(elements[8]) > 0))  {           
+		if ((Number(elements[7]) > 0) || (Number(elements[8]) > 0))  {   
+            //passa o texto para a tela entidade.entidade        
 			document.getElementById("situacao13").innerHTML = "Em atraso.";
+            //passa o texto para a tela pdf.entidade  
+            document.getElementById("situacaoTreze").value = "Em atraso."; 
         } 
     }
 
     if (!Number.isNaN(Number(elements[9]))) {
-		if ((Number(elements[9]) > 0) && ((Number(elements[7]) <= 0) && (Number(elements[8]) <= 0)))  {                   
-            document.getElementById("situacao13").innerHTML = "Renegociadas.";                      
+		if ((Number(elements[9]) > 0) && ((Number(elements[7]) <= 0) && (Number(elements[8]) <= 0)))  {  
+            //passa o texto para a tela entidade.entidade                   
+            document.getElementById("situacao13").innerHTML = "Renegociadas.";  
+             //passa o texto para a tela pdf.entidade  
+             document.getElementById("situacaoTreze").value = "Renegociadas.";                    
         } 
     }
    
 
     if ((!Number.isNaN(Number(elements[10]))) || (!Number.isNaN(Number(elements[11])))) {
-		if ((Number(elements[10]) > 0) || (Number(elements[11]) > 0))  {                
+		if ((Number(elements[10]) > 0) || (Number(elements[11]) > 0))  {   
+            //passa o texto para a tela entidade.entidade               
 			document.getElementById("situacao13").innerHTML = "Reneg em atraso.";
+            //passa o texto para a tela pdf.entidade  
+            document.getElementById("situacaoTreze").value = "Reneg em atraso."; 
         } 
     } 
 }
@@ -260,25 +265,33 @@ function calcular14() {
 	if (!Number.isNaN(Number(elements[6]))) {
 		if (Number(elements[6]) >= 0) {           
 			document.getElementById("situacao14").innerHTML = "Em dia.";
+            //passa o texto para a tela pdf.entidade  
+            document.getElementById("situacaoCatorze").value = "Em dia."; 
         } 
     }
     
     if ((!Number.isNaN(Number(elements[7]))) || (!Number.isNaN(Number(elements[8])))||(!Number.isNaN(Number(elements[9])))) {
 		if ((Number(elements[7]) > 0) || (Number(elements[8]) > 0) || (Number(elements[9]) > 0))  {           
 			document.getElementById("situacao14").innerHTML = "Em atraso.";
+            //passa o texto para a tela pdf.entidade  
+            document.getElementById("situacaoCatorze").value = "Em atraso."; 
         } 
     }
   
    
     if (!Number.isNaN(Number(elements[9]))) {
 		if ((Number(elements[9]) > 0) && (Number(elements[7]) <= 0) && (Number(elements[8]) <= 0))  {                   
-            document.getElementById("situacao14").innerHTML = "Renegociadas.";            
+            document.getElementById("situacao14").innerHTML = "Renegociadas.";  
+             //passa o texto para a tela pdf.entidade  
+             document.getElementById("situacaoCatorze").value = "Renegociadas.";                       
         } 
     }
 
     if ((!Number.isNaN(Number(elements[10]))) || (!Number.isNaN(Number(elements[11])))) {
 		if ((Number(elements[10]) > 0) || (Number(elements[11]) > 0))  {                
 			document.getElementById("situacao14").innerHTML = "Reneg em atraso.";
+             //passa o texto para a tela pdf.entidade  
+             document.getElementById("situacaoCatorze").value = "Reneg em atraso."; 
         } 
     } 
 }  
@@ -352,7 +365,7 @@ function desabilitaGerarSumula(){
 
 ////////////////////////////// função para verificar se os radio da entidade foram preenchidos////////////////
 
-function validaFormEnt(){      
+function validaFormEnt(){         
     var entControle = 0;
     if ($('input[name=anotSer]:checked').length > 0) {   
         var entRadio1 =  ($('input[name=anotSer]:checked').length > 0);                                                             
@@ -526,6 +539,8 @@ function validaFormEnt(){
     };   
 }
 
+
+
 /////////////VALIDAR OS RADIOS DOS DIRIGENTES 1 E 2 QUANDO CLICAR EM PORTFOLIO///////////////////////////////
 
 function validarDirigentes(){
@@ -535,8 +550,81 @@ function validarDirigentes(){
     var entControle = values.entControle;
     var dirig1Controle = 0;
     var dirig2Controle = 0;
+
+   /////////////VALIDAR SE OS CABEÇALHOS DOS DIRIGENTES FORAM PREENCHIDOS///////////////////////////////  
+   // dirigente1
+    var nomeDir1 = document.getElementById("dir1");
+    var cpf1 = document.getElementById("cpf1");
+    var mci1 = document.getElementById("mci1");
+    var cargo1 = document.getElementById("cargo1");
+    var mandato1 = document.getElementById("mandato1");
+
+    // dirigente1
+    var nomeDir2 = document.getElementById("dir2");
+    var cpf2 = document.getElementById("cpf2");
+    var mci2 = document.getElementById("mciDir2");
+    var cargo2 = document.getElementById("cargo2");
+    var mandato2 = document.getElementById("mandato2");
     
-    // validar dados do dirigente1     
+     // validar se os dados do cabeçalho do dirigente 1 foram preenchidos
+    if (nomeDir1.value == ""){
+        alert ("Nome não informado");        
+        nomeDir1.focus();
+        return;
+    } else if (cpf1.value == "") {
+        alert ("CPF não informado"); 
+        cpf1.focus();
+        return;
+    } else if (mci1.value == "") {
+        alert ("MCI não informado"); 
+        mci1.focus();
+        return;
+    } else if (cargo1.value == "") {
+        alert ("Cargo não informado"); 
+        cargo1.focus();
+        return;
+    } else if (mandato1.value == "") {
+        alert ("Data do mandato não informado"); 
+        mandato1.focus();
+        return;
+    }
+
+    // validar se os dados do cabeçalho do dirigente 2 foram preenchidos
+    if ((nomeDir2.value == "") && (qtdDir == 2)){
+
+        console.log(nomeDir2);        
+        alert ("Nome não informado");            
+        entMostraDirigente2();    
+        nomeDir2.focus();
+        return;
+    } else if ((cpf2.value == "") && (qtdDir == 2)){
+        alert ("CPF não informado"); 
+        entMostraDirigente2();
+        cpf2.focus();
+        return;
+    } else if ((mci2.value == "") && (qtdDir == 2)){
+        alert ("MCI não informado"); 
+        entMostraDirigente2();
+        mci2.focus();
+        return;
+    } else if ((cargo2.value == "") && (qtdDir == 2)){
+        alert ("Cargo não informado"); 
+        entMostraDirigente2();
+        cargo2.focus();
+        return;
+    } else if ((mandato2.value == "") && (qtdDir == 2)){
+        alert ("Data do mandato não informado"); 
+        entMostraDirigente2();
+        mandato2.focus();
+        return;
+    }
+
+    // validar dados do dirigente1  
+    if ($('input[name=dir1]:checked').length > 0) {   
+        var dir1Radio1 =  ($('input[name=anotEmSerDir1]:checked').length > 0);                                                                               
+    }  
+    
+
     if ($('input[name=anotEmSerDir1]:checked').length > 0) {   
         var dir1Radio1 =  ($('input[name=anotEmSerDir1]:checked').length > 0);                                                                               
     } 
@@ -655,15 +743,12 @@ function validarDirigentes(){
 
     // se houver apenas um dirigente vamos assumir que os dados do dirigente 2 estão ok
     if(qtdDir == 1){
-        dirig2Controle = 0;
+        dirig2Controle = 0;        
     }
 
     // se falta preencher dados da entidade
     if (entControle == 1){
         alert ("Preencha todos os dados da entidade");
-    
-    // } else if ((dirig1Controle == 0) && (dirig2Controle == 0) && (qtdDir == 2)) {        
-    //     alert ("os dois estão preenchidos");
 
     // se não houver a indicação da quantidade de dirigentes    
     } else if  (!(qtdDir == 1 || qtdDir == 2)) {
@@ -681,20 +766,24 @@ function validarDirigentes(){
     }  else if ((dirig1Controle == 1) && (dirig2Controle == 1) && (qtdDir == 2)){
         alert ("Preencha os dados dos dois dirigentes");  
     // se estiver tudo preenchido, mostra o portfólio    
-    } else {     
+    } else {            
         enviaForm();          
         entMostraPortfolio();
     }  
+    
     // enviar para o show o estado de preenchimento dos formulários
     document.getElementById("entControle").value = entControle;   
     document.getElementById("dirig1Controle").value = dirig1Controle;
-    document.getElementById("dirig2Controle").value = dirig2Controle;           
+    document.getElementById("dirig2Controle").value = dirig2Controle; 
    
+   
+
 }  
+
 
 // função acionada após a validação dos dirigentes
 function enviaForm(){            
-        var url = $("#formulario").attr("action");     
+        var url = window.location.protocol+'//'+window.location.host+'/entidades/store';     
         $.ajaxSetup({
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -709,11 +798,14 @@ function enviaForm(){
                 $('.ajax-loader').css("visibility", "visible");
             },
             success: function($retorno){               
-                $("#inputLimCalculado").text ($retorno.limFinal); 
-                $("#inputRisco1").text ($retorno.risco1); 
-                $("#inputRisco2").text ($retorno.risco2);   
-                $("#inputAuxCheqOuro").text ($retorno.auxCheqOuro); 
-                $("#inputAuxCartaoEmp").text ($retorno.auxCartaoEmp); 
+                $("#inputLimCalculado").val ($retorno.limFinal); 
+                $("#inputLimCalculadoSpan").text ($retorno.limFinal);
+                $("#inputRisco1").val ($retorno.risco1); 
+                $("#inputRisco1Span").text ($retorno.risco1);
+                $("#inputRisco2").val ($retorno.risco2);   
+                $("#inputRisco2Span").text ($retorno.risco2);
+                $("#inputAuxCheqOuro").val ($retorno.auxCheqOuro); 
+                $("#inputAuxCartaoEmp").val ($retorno.auxCartaoEmp);                 
                 preencherPortfolio();                           
             },
             error: function($retorno){
@@ -828,8 +920,8 @@ function mostrarRiscoChekedAut(){
 // preencher o portfólio a partir dos valores digitados pelo usuário e pelo cálculo do modelo
 function  preencherPortfolio(){  
     // preenche valores calculados contidos no bloco comercializaçao 
-    var risco1 = document.getElementById("inputRisco1").innerText;  
-    var limCalculado = document.getElementById("inputLimCalculado").innerText;  
+    var risco1 = document.getElementById("inputRisco1Span").innerText;  
+    var limCalculado = document.getElementById("inputLimCalculadoSpan").innerText;  
     if (risco1 == "Não calculado"){
         document.getElementById("portfCalcComer").value = 0; 
     } else {
@@ -1184,4 +1276,16 @@ function gerarSumula() {
     });
 }
 
-  
+// Função para bloquear caracteres nos anos de exercício
+$(document).ready(function() {
+    $("#exerc1").keyup(function() {
+        $("#exerc1").val(this.value.match(/[0-9]*/));        
+    });
+    $("#exerc2").keyup(function() {
+        $("#exerc2").val(this.value.match(/[0-9]*/));        
+    }); 
+    $("#exerc3").keyup(function() {
+        $("#exerc3").val(this.value.match(/[0-9]*/));        
+    });     
+});
+
