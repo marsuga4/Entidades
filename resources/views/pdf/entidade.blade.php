@@ -272,12 +272,12 @@ Data da alteração:
         </tr>
         
         <!-- Preenchimento da questão 12 -->
-        <table class="border answers">
+        <table class="border answers width-auto">
             <tr>
-                <td style="width:105px"></td>
-                <td class="bold" style="text-align: center; width:175px;"> Último Exercício - R$ </td>
-                <td class="bold" style="text-align: center; width:175px;"> Atual - R$ </td>
-                <td> <span class="bold"> Situação:&nbsp </span>{{$situacaoDoze}} </td>
+                <td class="w22"></td>
+                <td class="bold w15" style="text-align: center;"> Último Exercício - R$ </td>
+                <td class="bold w15" style="text-align: center; "> Atual - R$ </td>
+                <td class="w15"> <span class="bold"> Situação:&nbsp </span>{{$situacaoDoze}} </td>
             </tr>
             <tr>
                 <td>A vencer</td>

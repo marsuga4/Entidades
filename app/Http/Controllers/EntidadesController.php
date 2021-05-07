@@ -5,13 +5,14 @@
 	use DateTime;	
 	//incluir o mapeamento da classe Entidade
 	use App\Entidade;
+	use Barryvdh\DomPDF\Facade as PDF;
 	use illuminate\Http\Request;
 	use Illuminate\Support\Facades\Redirect;
 	use Session;
 	use Illuminate\Support\Facades\Input;
-	
+	use Illuminate\Support\Facades\Storage;
 
-	//herda da classe Controller que já vem do laravel
+//herda da classe Controller que já vem do laravel
 	class EntidadesController extends Controller
 	{
 		public function index(Request $request) {
@@ -1241,22 +1242,21 @@
 		/////////////////////Cheque Ouro Empresarial AC75 - Cartão Empresarial AC81///////////////////////////////////////////////////////
 		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		// Capturar o risco anterior
-		// $portfRiscAnt = $request->portfRiscAnt;	
+		$portfRiscAnt = $request->portfRiscAnt;	
 
 		// Capturar o limite anterior
-		// $portfLimAnt = $request->portfLimAnt;
+		$portfLimAnt = $request->portfLimAnt;
 		
 		// Capturar o vencimento atual
-		// $entLim = $request->entLim;
+		$entLim = $request->entLim;
 
 		// Capturar o risco atribuído
 		$inputRisco1 = $request->risco1;
 	
 		// Capturar o risco atribuído FEI
-		// $inputRisco2 = $request->inputRisco2;
+		$inputRisco2 = $request->inputRisco2;
 
-
-		
+				
 		// Capturar o valor calculado do cheque ouro
 		$calcChequeOur = floatval($request->calcChequeOur);	
 		
@@ -1479,7 +1479,15 @@
 	}
 
 	public function pdf (Request $request){
-		return view('pdf.pdf', $request->all());
+		// Get image
+		$baseImage = Storage::get('public/logo.png');
+		// Turn into base64 image
+		$baseImage = base64_encode($baseImage);
+		$baseImage = 'data:image/png;base64,'.$baseImage;		
+		$pdf = PDF::loadView('pdf.pdf', array_merge($request->all(),['logo'=>$baseImage]));
+		$name = $request->mci.'-'.date('d-m-Y-h-i-s',time());
+		Storage::put('controle-sumulas/'.$name.'.pdf',$pdf->download()->getOriginalContent());
+		return view('pdf.pdf', array_merge($request->all(),['logo'=>$baseImage]));
 	}
 
 }

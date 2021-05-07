@@ -9,18 +9,18 @@ Data da alteração:  -->
  <table> 
     <tr> 
         <td class="questions w33">         
-            Risco anterior                   
-        <td>       
+            Risco anterior                 
+        </td>       
         <td class="questions w33">         
             Limite de crédito atual - R$           
-        <td>     
+        </td>     
         <td class="questions w33">         
             Vencimento            
-        <td>                                                    
+        </td>                                                    
     </tr>            
 
     <tr> 
-        <td class="w33"> {{$portfRiscAnt}}</td>  
+        <td class="w33" style="padding-left: 46px;"> {{$portfRiscAnt}}</td>  
         <td class="w33">{{$portfLimAnt}}</td>  
         <td class="w33">{{$vencAtual}}</td>                    
     </tr>              
@@ -30,16 +30,16 @@ Data da alteração:  -->
     <tr> 
         <td class="questions w20">         
             Risco atribuído                   
-        <td>       
+        </td>       
         <td class="questions w20">         
             Risco FEI atribuído            
-        <td>     
+        </td>     
         <td class="questions w20">         
             Limite calculado - R$            
-        <td> 
+        </td> 
         <td class="questions w20">         
             Limite estabelecido/proposto - R$            
-        <td>                                                    
+        </td>                                                    
     </tr>            
 
     <tr> 

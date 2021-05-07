@@ -72,6 +72,17 @@
        width: 100%;
    }
 
+   .pdf table.width-auto{
+       width: auto;
+   }
+
+   .pdf table .w22{
+       width: 22%;
+   }
+
+   .pdf table .w15{
+       width: 15%;
+   }
     /* configurar as tabelas da pergunta 16 */
    .pdf .tab16a {        
         border: 1px solid black;                   
@@ -132,12 +143,26 @@
    .pdf ::-webkit-input-placeholder {
     color: red;
    }
+
+   .pdf table .w30{
+        width: 30%;
+   }
    
    
 </style>
 
 <!-- includes das views -->
-<div class="pdf">
+<div class="pdf">   
+    <table>
+        <tr>
+            <td rowspan="2" style="width: 25%;"> <img src="{{$logo}}" width='100%' height="auto"/> </td>
+            <td style="width: 75%;">Súmula de Análise de Risco e Limite de Crédito </td>
+        </tr>
+        <tr>           
+            <td> Entidades Sem Fins Lucrativos </td>
+        </tr>
+
+    </table>
     <h1>Dados da Entidade</h1>
     @include('pdf.entidade')
 
