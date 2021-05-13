@@ -82,9 +82,16 @@ Data da alteração:  -->
                 Erro - Verifique a questão na aba Portfólio
             @endif
         </td>                         
-    </tr> 
-
-                 
+    </tr>                 
 </table>
 
+<!-- Valores estabelecidos propostos -->
+
+<table> 
+    <tr> 
+        <td class="questions">         
+            Valores estabelecidos/propostos com base nas condições anteriormente estabelecidas pela Divisão de Análise                   
+        </td>   
+    </tr>               
+</table>
 
