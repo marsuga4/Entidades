@@ -11,7 +11,7 @@ Data da alteração:
 
 <!-- cabeçalho -->
 <table>
-    <tr>
+    <tr class="bold">
         <td> MCI: {{$mci}} </td>
         <td> Nome da Entidade: {{$nome}} </td>
         <td> Data: <?= date('d/m/Y') ?> </td>
@@ -327,12 +327,12 @@ Data da alteração:
         </tr>
     
             <!-- Preenchimento da questão 13 -->
-        <table class="border answers">    
+        <table class="border answers width-auto">    
             <tr>
-                <td style="width:105px"></td>
-                <td class="bold" style="text-align: center; width:175px;"> Último Exercício - R$ </td>
-                <td class="bold" style="text-align: center; width:175px;"> Atual - R$ </td>
-                <td> <span class="bold"> Situação:&nbsp </span>{{$situacaoTreze}} </td>
+                <td class="w22"></td>
+                <td class="bold w15" style="text-align: center;"> Último Exercício - R$ </td>
+                <td class="bold w15" style="text-align: center;"> Atual - R$ </td>
+                <td class="w15"> <span class="bold"> Situação:&nbsp </span>{{$situacaoTreze}} </td>
             </tr>
             <tr>
                 <td>A vencer</td>
@@ -382,12 +382,12 @@ Data da alteração:
         </tr>
 
             <!-- Preenchimento da questão 14 -->
-        <table class="border answers">    
+        <table class="border answers width-auto">    
             <tr>
-                <td style="width:105px"></td>
-                <td class="bold" style="text-align: center; width:175px;"> Último Exercício - R$ </td>
-                <td class="bold" style="text-align: center; width:175px;"> Atual - R$ </td>
-                <td> <span class="bold"> Situação:&nbsp </span>{{$situacaoCatorze}} </td>
+                <td class="w22"></td>
+                <td class="bold w15" style="text-align: center;"> Último Exercício - R$ </td>
+                <td class="bold w15" style="text-align: center;"> Atual - R$ </td>
+                <td class="w15"> <span class="bold"> Situação:&nbsp </span>{{$situacaoCatorze}} </td>               
             </tr>
             <tr>
                 <td>A vencer</td>

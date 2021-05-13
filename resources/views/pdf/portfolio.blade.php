@@ -8,21 +8,25 @@ Data da alteração:  -->
 
  <table> 
     <tr> 
-        <td class="questions w33">         
+        <td class="questions w20">         
             Risco anterior                 
         </td>       
-        <td class="questions w33">         
+        <td class="questions w20">         
             Limite de crédito atual - R$           
         </td>     
-        <td class="questions w33">         
+        <td class="questions w20">         
             Vencimento            
+        </td>  
+        <td class="questions w20">         
+                       
         </td>                                                    
     </tr>            
 
     <tr> 
-        <td class="w33" style="padding-left: 46px;"> {{$portfRiscAnt}}</td>  
-        <td class="w33">{{$portfLimAnt}}</td>  
-        <td class="w33">{{$vencAtual}}</td>                    
+        <td class="w20" style="padding-left: 46px;"> {{$portfRiscAnt}}</td>  
+        <td class="w20" style="padding-left: 76px;">{{$portfLimAnt}}</td>  
+        <td class="w20">{{$vencAtual}}</td>   
+        <td class="w20"></td>                 
     </tr>              
 </table>
 
@@ -43,12 +47,44 @@ Data da alteração:  -->
     </tr>            
 
     <tr> 
-        <td class="w20"> {{$inputRisco1}}</td>  
-        <td class="w20">{{$inputRisco2}}</td>  
-        <td class="w20">{{$inputLimCalculado}}</td>    
-        <td class="w20">{{$limPropPortf}}</td>                
+        <td class="w20" style="padding-left: 46px;"> {{$inputRisco1}}</td>  
+        <td class="w20" style="padding-left: 66px;">{{$inputRisco2}}</td>  
+        <td class="w20" style="padding-left: 66px;">{{$inputLimCalculado}}</td>    
+        <td class="w20" style="padding-left: 176px;">{{$limPropPortf}}</td>                
     </tr>              
 </table>
 
+
+<!-- Alçada e Situação Econômica -->
+
+<table> 
+    <tr> 
+        <td class="questions">         
+            Alçada                   
+        </td>   
+    </tr>       
+    <tr> 
+        <td> {{$alcada}}</td>                         
+    </tr>  
+    <tr> 
+        <td class="questions">         
+            A situação econômico-financeira da entidade comporta o limite de crédito estabelecido/proposto                   
+        </td> 
+    </tr>
+                           
+    <tr>    
+        <td> 
+            @if(isset($sitEcon) && ($sitEcon == 1))
+                Sim
+            @elseif(isset($sitEcon) && ($sitEcon == 2))
+                Não 
+            @else    
+                Erro - Verifique a questão na aba Portfólio
+            @endif
+        </td>                         
+    </tr> 
+
+                 
+</table>
 
 

@@ -139,11 +139,7 @@
        font-size: 21px;
    }
 
-   /* estilizar o placeholder */
-   .pdf ::-webkit-input-placeholder {
-    color: red;
-   }
-
+  
    .pdf table .w30{
         width: 30%;
    }
@@ -154,12 +150,12 @@
 <!-- includes das views -->
 <div class="pdf">   
     <table>
-        <tr>
+        <tr class="bold">
             <td rowspan="2" style="width: 25%;"> <img src="{{$logo}}" width='100%' height="auto"/> </td>
-            <td style="width: 75%;">Súmula de Análise de Risco e Limite de Crédito </td>
+            <td style="width: 75%; text-align:justify;">Súmula de Análise de Risco e Limite de Crédito </td>
         </tr>
-        <tr>           
-            <td> Entidades Sem Fins Lucrativos </td>
+        <tr class="bold">           
+            <td style="text-align: justify;"> Entidades Sem Fins Lucrativos </td>
         </tr>
 
     </table>

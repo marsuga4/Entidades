@@ -7,12 +7,12 @@ Data da alteração:  -->
 
 <!-- cabeçalho -->
 <table>
-    <tr>
+    <tr class="bold">
         <td> Nome do Dirigente: {{$dir2}} </td>
         <td> CPF: {{$cpf2}} </td>
         <td> MCI: {{$mcidir2}} </td>        
     </tr>
-    <tr>
+    <tr class="bold">
         <td> Cargo: {{$cargo2}} </td>           
         <td> Vencimento do mandato: {{\Carbon\Carbon::parse($mandato2)->format('d/m/Y')}} </td>           
     </tr>

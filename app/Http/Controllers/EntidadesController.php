@@ -31,19 +31,14 @@
 			$mci = $request->get('mci');
 			$limFinal = ($request->has('limFinal'))?$request->get('limFinal'):null;
 			$risco1 = ($request->has('risco1'))?$request->get('risco1'):null;			
-			$risco2 = ($request->has('risco2'))?$request->get('risco2'):null;
-			
-			
-			
-			
+			$risco2 = ($request->has('risco2'))?$request->get('risco2'):null;			
 			$entidades = Entidade::where('cd_cli', $mci)->get()->first();  																  				   
     		if($entidades){    							
 				return view ('/entidades/show',compact('entidades','limFinal','mci','risco1', 'risco2'));				    									
 			} else {																							
 				session()->flash('msg', 'MCI inválido ou a entidade não atende aos requisitos da IN 23!');
 				return redirect()->back();
-			} 			
-										    		
+			} 													    		
 		} 
 
 				
@@ -1248,7 +1243,7 @@
 		$portfLimAnt = $request->portfLimAnt;
 		
 		// Capturar o vencimento atual
-		$entLim = $request->entLim;
+		$vencAtual = $request->vencAtual;
 
 		// Capturar o risco atribuído
 		$inputRisco1 = $request->risco1;
@@ -1311,171 +1306,21 @@
 		// dados que são retornados para o show				
 		return json_encode(['limFinal'=> $limFinal, 'mci'=> $mci, 'risco1'=>$risco1, 'risco2'=>$risco2,
 		'auxCheqOuro'=>$auxCheqOuro, 'auxCartaoEmp'=>$auxCartaoEmp]);
-			
-		
-		// echo (var_dump($entControle))."<br>";'
-		// echo (var_dump($dirig1Controle))."<br>";
-		// echo (var_dump($dirig2Controle))."<br>";
-		// echo ("vencer SCR1 ").($entVencerSCR1)."<br>";
-		// echo ("vencer SCR2 ").($entVencerSCR2)."<br>";
-		// echo ("lim calculado ").($limCalc)."<br>";
-		
-
-		
-		// echo ("ceric ").($ceric)."<br>";
-		
-
-		// echo ("pontuação ").($pontuacao)."<br>";
-		// echo ("risco A ").($riscoA)."<br>";
-		// echo ("risco B ").($riscoB)."<br>";
-		// echo ("risco C ").($riscoC)."<br>";
-		// echo ("risco D ").($riscoD)."<br>";
-		
-		// echo "rob 12 meses ".($rob12Meses)."<br>";
-		// echo ("faturamento 12 sobre CER cp ").($rob12_ceric)."<br>";
-		
-		// $numero = number_format((float)$menorI_34, 2, ',', '.');
-		
-		
-		// echo ("rob ").($ROB)."<br>";
-		// echo ("risco 1 ").($risco1)."<br>";
-		// echo ("risco 2 ").($risco2)."<br>";
-		// echo ("limite final ").($limFinal)."<br>";
-		// echo (var_dump($risco1))."<br>";
-
-		// echo (var_dump($pontAnalise1))."<br>";
-		// echo (var_dump($pontAnalise2))."<br>";
-		// echo (var_dump($pontAnalise3))."<br>";
-		// echo (var_dump($pontAnalise4))."<br>";
-		// echo (var_dump($pontAnalise5))."<br>";
-		// echo (var_dump($pontAnalise6))."<br> <br>";
-		// echo (var_dump($pontAnalise7))."<br>";
-		// echo ("pontuação final 7b").(var_dump($entFinal_7b))."<br>";
-		// echo ("dirigente 1 7b").(var_dump($dir1Final7b))."<br>";
-		// echo ("dirigente 1 devolução").(var_dump($dir1Dev))."<br>";		
-		// echo ("dirigente 1 excessos").(var_dump($dir1Exces))."<br>";		
-		// echo "pontuação 7a do dirigente 1 "; var_dump($dir1_7a); echo "<br>";
-		// echo "pontuação 7b do dirigente 1 "; var_dump($dir1_7b); echo "<br>";
-		// echo ("dirigente 1 7a").(var_dump($dir1Final7a))."<br>";
-		// echo ("dirigente 1 7b").(var_dump($dir1Final7b))."<br>";
-		// echo ("dirigente 2 devolução").(var_dump($dir2Dev))."<br>";		
-		// echo ("dirigente 2 excessos").(var_dump($dir2Exces))."<br>";		
-		// echo "pontuação 7a do dirigente 2 "; var_dump($dir2_7a); echo "<br>";
-		// echo "pontuação 7b do dirigente 2 "; var_dump($dir2_7b); echo "<br>";
-		// echo ("dirigente 2 7a").(var_dump($dir2Final7a))."<br>";
-		// echo ("dirigente 2 7b").(var_dump($dir2Final7b))."<br>";
-		// echo (var_dump($pontAnalise8))."<br>";
-		// echo (var_dump($pontAnalise9))."<br>";
-		// echo (var_dump($pontAnalise10))."<br>";
-		// echo (var_dump($pontAnalise11))."<br>";
-		// echo (var_dump($pontAnalise12))."<br>";
-		// echo (var_dump($pontAnalise13))."<br>";
-		// echo (var_dump($pontAnalise14))."<br>";
-		// echo (var_dump($pontAnalise15))."<br>";
-		// echo (var_dump($pontAnalise16))."<br>";
-
-		
-
-
-		// $somaEntFiscaisPrev = $entRespFiscPrev2 + $entRespFiscPrev3 + $entRespFiscPrev5 + $entRespFiscPrev6;
-		// $somaEntFornec = $entRespForn2 + $entRespForn3 + $entRespForn5 + $entRespForn6;
-		// $somaEntRespTrab = $entRespTrab2 + $entRespTrab3 + $entRespTrab5 + $entRespTrab6;
-		// $somaEntSCR = $entTotVencidoSCR + $entCredBaixSCR; 
-		
-		// echo (var_dump($pontAnalise1))."<br>";
-		// echo (var_dump($pontAnalise2))."<br>";
-		// echo (var_dump($pontAnalise3))."<br>";
-		// echo (var_dump($pontAnalise4))."<br>";
-		// echo (var_dump($pontAnalise5))."<br>";
-		// echo (var_dump($pontAnalise6))."<br>";
-		// echo (var_dump($pontAnalise7))."<br>";
-		// echo (var_dump($pontAnalise8))."<br>";
-		// echo (var_dump($pontAnalise9))."<br>";
-		// echo (var_dump($pontAnalise10))."<br>";
-		// echo (var_dump($pontAnalise11))."<br>";
-		// echo (var_dump($pontAnalise12))."<br>";
-		// echo (var_dump($pontAnalise13))."<br>";
-		// echo (var_dump($pontAnalise14))."<br>";
-		// echo (var_dump($pontAnalise15))."<br>";
-		// echo (var_dump($pontAnalise16))."<br>";
-		// echo (var_dump($pontAnalise17))."<br>";
-		// echo (var_dump($pontAnalise18))."<br>";
-		// echo (var_dump($pontAnalise19))."<br>";
-		// echo (var_dump($pontAnalise20))."<br>";
-		// echo (var_dump($pontAnalise21))."<br>";
-		// echo (var_dump($pontAnalise22))."<br>";
-		
-
-
-
-		//echo ("tempo de atividade")."<br>"; echo (var_dump($entTempAtv))."<br>";
-		// echo (var_dump($pontAnalise1))."<br>";
-		// echo (var_dump($pontAnalise2))."<br>";
-		// echo (var_dump($pontAnalise3))."<br>";
-		// echo (var_dump($pontAnalise4))."<br>";
-		// echo (var_dump($pontAnalise5))."<br>";
-		// echo (var_dump($pontAnalise6))."<br>";
-		// echo (var_dump($pontAnalise7))."<br>";
-		// echo (var_dump($pontAnalise8))."<br>";
-		// echo (var_dump($pontAnalise9))."<br>";
-		// echo (var_dump($pontAnalise10))."<br>";
-		// echo (var_dump($pontAnalise11))."<br>";
-		// echo (var_dump($pontAnalise12))."<br>";
-		// echo (var_dump($pontAnalise13))."<br>";
-		// echo (var_dump($pontAnalise14))."<br>";
-		// echo (var_dump($pontAnalise15))."<br>";
-		// echo (var_dump($pontAnalise16))."<br>";
-		// echo (var_dump($pontAnalise17))."<br>";
-		// echo (var_dump($pontAnalise18))."<br>";
-		// echo (var_dump($pontAnalise19))."<br>";
-		// echo (var_dump($pontAnalise20))."<br>";
-		// echo (var_dump($pontAnalise21))."<br>";
-		// echo (var_dump($pontAnalise22))."<br>";
-		// echo (var_dump($checagemAnalise));
-		// echo "<br>";
-		//  var_dump($entAnotSer);
-		//  var_dump($entAnotRep);
-		//  var_dump($dir1AnotSer);
-		//  var_dump($dir1AnotRep);
-		//  var_dump($entDirig);
-		//  var_dump($pont1Dir2);
-		//  var_dump($pontAnalise1);		
-		// var_dump($entDevol); echo "<br>";
-		// var_dump($ent7a); echo "<br>";
-		// var_dump($entFinal_7a); echo "<br>";		
-		// var_dump($entExcec); echo "<br>";
-		// var_dump($ent7b); echo "<br>";
-		// echo "pontuação final do 7b "; var_dump($entFinal_7b); echo "<br>";						
-		// echo "pontuação final do dirigente 1 "; var_dump($dir1Final7b); echo "<br>";
-		// echo "pontuação devolução do dirigente 2 "; var_dump($dir2Dev); echo "<br>";
-		// echo "pontuação excessos do dirigente 2 "; var_dump($dir2Exces); echo "<br>";
-		// echo "pontuação 7a do dirigente 2 "; var_dump($dir2_7a); echo "<br>";
-		// echo "pontuação 7b do dirigente 2 "; var_dump($dir2_7b); echo "<br>";
-		// echo "pontuação final A do dirigente 2 "; var_dump($dir2Final7a); echo "<br>";
-		// echo "pontuação final B do dirigente 2 "; var_dump($dir2Final7b); echo "<br>";		
-		// echo "talonário "; var_dump($ent7a); echo "<br>";
-		// echo "cliente novo"; var_dump($ent7b); echo "<br>";
 	}
 	
 
 	
 
 
-		// capturar da session o id e o nome através da mensagem que foi definida no index. o flash dura apenas uma sessão
-	    //$request->session()->flash('mensagem',"Entidade {$entidade->id} criada com sucesso {$entidade->nome}");
-	    //return redirect('/entidades');
-	//}
+	
 
 	// função para remover entidade
 	public function destroy (Request $request)
 
 	{
-
 	    Entidade::destroy($request->id);
 	    $request->session()->flash('mensagem',"Entidade removida com sucesso");
-
 	    return redirect('/entidades');
-
 	}
 
 	public function pdf (Request $request){

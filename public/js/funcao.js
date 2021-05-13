@@ -99,7 +99,8 @@ $(document).ready(function(){
         $("input[name=cpf1]").val('233.333.333-60');
         $("input[name=mci1]").val('999999999');
         $("input[name=cargo1]").val('Diretor');
-        $("input[name=mandato1]").val('13/05/2029');
+        //vencimento do mandato (dia atual)
+        document.getElementById('mandato1').value = new Date().toISOString().substring(0, 10);               
 
         $('#anotEmSerDir1-1').attr('checked', true);
         $('#anotRepDir1-1').attr('checked', true);
