@@ -1302,7 +1302,7 @@
 		
 		//return view('pdf.pdf', array_merge($request->all(),['inputRisco1'=>$risco1,'inputRisco2'=>$risco2,
 		//'inputLimCalculado' =>$limCalc]));
-	
+		
 		// dados que são retornados para o show				
 		return json_encode(['limFinal'=> $limFinal, 'mci'=> $mci, 'risco1'=>$risco1, 'risco2'=>$risco2,
 		'auxCheqOuro'=>$auxCheqOuro, 'auxCartaoEmp'=>$auxCartaoEmp]);
@@ -1322,8 +1322,10 @@
 	    $request->session()->flash('mensagem',"Entidade removida com sucesso");
 	    return redirect('/entidades');
 	}
+	
 
 	public function pdf (Request $request){
+		//dd($request->all());
 		// Get image
 		$baseImage = Storage::get('public/logo.png');
 		// Turn into base64 image
