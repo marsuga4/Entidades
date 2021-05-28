@@ -110,17 +110,17 @@
 <div class="answers">            
         <table  style="float: left" class="tab-portfolio">
                 <tr> <td >&nbsp</td> <td style="text-align: center;"> <b> Calculado</b> </td> </tr>   
-                <tr> <td><b>COMERCIALIZAÇÃO</b></td> <td class="valor-tab"><input id="portfCalcComer" style= "text-align: right;"/></td>                                                             
-                <tr> <td>&nbsp&nbsp&nbsp&nbsp&nbsp<b> Antecipação de Recebíveis</b></td> <td class="valor-tab"> <input id="portfCalcAntRec" style= "text-align: right;"/></td>                                                                         
-                <tr> <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp1. ACL – Antecipação VISA</td> <td class="valor-tab"> <input id="portfCalcAntACL" style= "text-align: right;"/></td>                                   
-                <tr> <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp2. Desconto de Cheques</td> <td class="valor-tab"> <input id="portfCalcDescChq" style= "text-align: right;"/></td>                                    
-                <tr> <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp3. Desconto de Duplicatas</td> <td class="valor-tab"> <input id="portfCalcDescDupl" style= "text-align: right;"/></td> 
-                <tr> <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp4. Vendor</td> <td class="valor-tab"> <input id="portfCalcVend" style= "text-align: right;"/></td> 
-                <tr> <td>&nbsp&nbsp&nbsp&nbsp&nbsp<b> Lastreadas por Recebíveis</b></td> <td class="valor-tab"> <input id="portfCalcLastRec" style= "text-align: right;"/></td> 
-                <tr> <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp1. Lastreadas por fatura VISA</td> <td class="valor-tab"> <input id="portfCalcLastVisa" style= "text-align: right;"/></td> 
-                <tr> <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp2. Lastreadas por Cheques</td> <td class="valor-tab"> <input id="portfCalcLastChq" style= "text-align: right;"/></td> 
-                <tr> <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp3. Lastreadas por Títulos</td> <td class="valor-tab"> <input id="portfCalcLastTit" style= "text-align: right;"/></td> 
-                <tr> <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp4. Antecipação Fatura SUS</td> <td class="valor-tab"> <input id="portfCalcAntSUS" style= "text-align: right;"/></td>                                 
+                <tr> <td><b>COMERCIALIZAÇÃO</b></td> <td class="valor-tab"><input id="portfCalcComer" name="portfCalcComer" style= "text-align: right;"/></td>                                                             
+                <tr> <td>&nbsp&nbsp&nbsp&nbsp&nbsp<b> Antecipação de Recebíveis</b></td> <td class="valor-tab"> <input id="portfCalcAntRec" name="portfCalcAntRec" style= "text-align: right;"/></td>                                                                         
+                <tr> <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp1. ACL – Antecipação VISA</td> <td class="valor-tab"> <input id="portfCalcAntACL" name="portfCalcAntACL" style= "text-align: right;"/></td>                                   
+                <tr> <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp2. Desconto de Cheques</td> <td class="valor-tab"> <input id="portfCalcDescChq" name="portfCalcDescChq" style= "text-align: right;"/></td>                                    
+                <tr> <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp3. Desconto de Duplicatas</td> <td class="valor-tab"> <input id="portfCalcDescDupl" name="portfCalcDescDupl" style= "text-align: right;"/></td> 
+                <tr> <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp4. Vendor</td> <td class="valor-tab"> <input id="portfCalcVend" name="portfCalcVend" style= "text-align: right;"/></td> 
+                <tr> <td>&nbsp&nbsp&nbsp&nbsp&nbsp<b> Lastreadas por Recebíveis</b></td> <td class="valor-tab"> <input id="portfCalcLastRec" name="portfCalcLastRec" style= "text-align: right;"/></td> 
+                <tr> <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp1. Lastreadas por fatura VISA</td> <td class="valor-tab"> <input id="portfCalcLastVisa" name="portfCalcLastVisa" style= "text-align: right;"/></td> 
+                <tr> <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp2. Lastreadas por Cheques</td> <td class="valor-tab"> <input id="portfCalcLastChq" name="portfCalcLastChq" style= "text-align: right;"/></td> 
+                <tr> <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp3. Lastreadas por Títulos</td> <td class="valor-tab"> <input id="portfCalcLastTit" name="portfCalcLastTit" style= "text-align: right;"/></td> 
+                <tr> <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp4. Antecipação Fatura SUS</td> <td class="valor-tab"> <input id="portfCalcAntSUS" name="portfCalcAntSUS" style= "text-align: right;"/></td>                                 
         </table>  
 
 
@@ -131,14 +131,14 @@
                 <tr> <td class="valor-tab"><input type="text" readonly=“true” style= "text-align: right;" id="estabComercial" name="estabComercial" class="format"/></td></tr>        
                 <tr> <td class="valor-tab"><input type="text" readonly=“true” style= "text-align: right;" name="estabAntecRec" id="estabAntecRec" class="format estabPropRec"/></td></tr>                                       
                 <tr> <td class="valor-tab"><input onblur="maiorValor()" type="text" style= "text-align: right;" id="estabACL" name="estabACL" class="format antecRec"/></td></tr>                                        
-                <tr> <td class="valor-tab"><input onblur="maiorValor()" type="text" style= "text-align: right;" id="estabDesCheq" class="format antecRec"/></td></tr>                                       
-                <tr> <td class="valor-tab"><input onblur="maiorValor()" type="text" style= "text-align: right;" id="estabDescDupl" class="format antecRec"/></td></tr>                                       
-                <tr> <td class="valor-tab"><input onblur="maiorValor()" type="text" style= "text-align: right;" id="estabVendor" id="estabLastRec" class="format antecRec"/></td></tr>                                                                                         
+                <tr> <td class="valor-tab"><input onblur="maiorValor()" type="text" style= "text-align: right;" id="estabDesCheq" name="estabDesCheq" class="format antecRec"/></td></tr>                                       
+                <tr> <td class="valor-tab"><input onblur="maiorValor()" type="text" style= "text-align: right;" id="estabDescDupl" name="estabDescDupl" class="format antecRec"/></td></tr>                                       
+                <tr> <td class="valor-tab"><input onblur="maiorValor()" type="text" style= "text-align: right;" id="estabVendor" name="estabVendor" class="format antecRec"/></td></tr>                                                                                         
                 <tr> <td class="valor-tab"><input type="text" readonly=“true” style= "text-align: right;" name="estabLastRec" id="estabLastRec" class="format"/></td></tr>
-                <tr> <td class="valor-tab"><input onblur="maiorValor()" type="text" style= "text-align: right;" id="estabVisa" class="format lastRec"/></td></tr>
-                <tr> <td class="valor-tab"><input onblur="maiorValor()" type="text" style= "text-align: right;" id="estabCheq" class="format lastRec"/></td></tr>
-                <tr> <td class="valor-tab"><input onblur="maiorValor()" type="text" style= "text-align: right;" id="estabTit" class="format lastRec"/></td></tr>
-                <tr> <td class="valor-tab"><input onblur="maiorValor()" type="text" style= "text-align: right;" id="estabSus" class="format lastRec"/></td></tr>                                 
+                <tr> <td class="valor-tab"><input onblur="maiorValor()" type="text" style= "text-align: right;" id="estabVisa" name="estabVisa" class="format lastRec"/></td></tr>
+                <tr> <td class="valor-tab"><input onblur="maiorValor()" type="text" style= "text-align: right;" id="estabCheq" name="estabCheq" class="format lastRec"/></td></tr>
+                <tr> <td class="valor-tab"><input onblur="maiorValor()" type="text" style= "text-align: right;" id="estabTit" name="estabTit" class="format lastRec"/></td></tr>
+                <tr> <td class="valor-tab"><input onblur="maiorValor()" type="text" style= "text-align: right;" id="estabSus" name="estabSus"  class="format lastRec"/></td></tr>                                 
         </table>    
 
         <div id="space"></div>  
@@ -160,8 +160,8 @@
 
 <!-- Capital de giro -->
 <table  style="float: left" class="tab-portfolio">             
-        <tr> <td><b>CAPITAL DE GIRO</b></td> <td class="valor-tab"><input id="calcCapitGiro" class="format" style= "text-align: right;"/></td>        
-        <tr> <td>&nbsp&nbsp&nbsp&nbsp&nbsp<b>Crédito Rotativo</b></td> <td class="valor-tab"><input id="calcCredRot" class="format" style= "text-align: right;"/></td>              
+        <tr> <td><b>CAPITAL DE GIRO</b></td> <td class="valor-tab"><input id="calcCapitGiro" name="calcCapitGiro" class="format" style= "text-align: right;"/></td>        
+        <tr> <td>&nbsp&nbsp&nbsp&nbsp&nbsp<b>Crédito Rotativo</b></td> <td class="valor-tab"><input id="calcCredRot" name="calcCredRot" class="format" style= "text-align: right;"/></td>              
         <tr> <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp1. Cheque Ouro Empresarial&nbsp;</td> <td class="valor-tab"><input id="calcChequeOur" name="calcChequeOur" class="format" style= "text-align: right;"/></td>
         <!-- Compara o calculado para o cheque ouro e o vigente digitado pelo usuário -->
         <input type="hidden" id="inputAuxCheqOuro">
@@ -171,7 +171,7 @@
 <table  style="float: left" class="tab-portfolio" >                                          
         <tr> <td class="valor-tab"><input type="text" readonly=“true” style= "text-align: right;" id="estabCapitalGiro" name="estabCapitalGiro" class="format"/></td></tr>                                       
         <tr> <td class="valor-tab"><input type="text" readonly=“true” style= "text-align: right;" id="estabCredRot" name="estabCredRot" class="format"/></td></tr>                                                                                               
-        <tr> <td class="valor-tab"><input onblur="maiorValor()" type="text" style= "text-align: right;" id="estabChqOuro" class="format rotativo estabProp"/></td></tr>     
+        <tr> <td class="valor-tab"><input onblur="maiorValor()" type="text" style= "text-align: right;" id="estabChqOuro" name="estabChqOuro" class="format rotativo estabProp"/></td></tr>     
 </table>    
 <div id="space"></div>  
 <table style="float: left" class="tab-portfolio">                                                                                                                                  
@@ -191,7 +191,7 @@
 
 <table  style="float: left" class="tab-portfolio" >                                          
         <tr> <td id="no-border">&nbsp</td></tr>                         
-        <tr> <td class="valor-tab"><input onblur="maiorValor()" type="text" style= "text-align: right;" id="estabCartEmp" class="format rotativo estabProp"/></td></tr>                                                                                                                                           
+        <tr> <td class="valor-tab"><input onblur="maiorValor()" type="text" style= "text-align: right;" id="estabCartEmp" name="estabCartEmp" class="format rotativo estabProp"/></td></tr>                                                                                                                                           
         <tr> <td id="no-border">&nbsp</td></tr>
 </table>    
 <div id="space"></div>  
@@ -205,14 +205,14 @@
 <!-- Longo Prazo -->   
 <table  style="float: left" class="tab-portfolio">                                                                                      
         <tr> <td width=253><b>LONGO PRAZO</b></td> </tr>                                                                             
-        <tr> <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp1. Investimento/Leasing</td> <td class="valor-tab"><input id="calcInvest" class="format" style= "text-align: right;"/></td>                                                                     
+        <tr> <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp1. Investimento/Leasing</td> <td class="valor-tab"><input id="calcInvest" name="calcInvest" class="format" style= "text-align: right;"/></td>                                                                     
         <tr> <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp doméstico</td> </tr>                                                                               
 </table>   
 <div id="space"></div>
 
 <table  style="float: left" class="tab-portfolio" >                                          
         <tr> <td id="no-border">&nbsp</td></tr>                         
-        <tr> <td class="valor-tab"><input type="text" style= "text-align: right;" id="estabInv" class="format"/></td></tr>                                                                                                                                           
+        <tr> <td class="valor-tab"><input type="text" style= "text-align: right;" id="estabInv" name="estabInv" class="format"/></td></tr>                                                                                                                                           
         <tr> <td id="no-border">&nbsp</td></tr>
 </table>    
 <div id="space"></div>  

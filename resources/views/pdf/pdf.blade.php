@@ -83,6 +83,10 @@
    .pdf table .w15{
        width: 15%;
    }
+
+   .pdf table .w40{
+       width: 40%;
+   }
     /* configurar as tabelas da pergunta 16 */
    .pdf .tab16a {        
         border: 1px solid black;                   
@@ -176,8 +180,9 @@
     @include('pdf.faturamento')
 
     <h1>Risco/Limite de Crédito</h1>
+    @include('pdf.risco_limite')
+    <h1>Portfólio do Limite de Crédito</h1>
     @include('pdf.portfolio')
-    
     
 
 </div>                                                                         

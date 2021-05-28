@@ -1254,13 +1254,14 @@ $(document).ready(function(){
             var estabProposto2 = parseFloat(estabProposto1);             
         }       
        
-        if (Math.max(antecRecEstab2,lastrRecEstab2) > estabProposto2){
-            var estabComercial = "Ajuste ao limite proposto";
-        } else {    
-            var estabComercial1 = Math.max(antecRecEstab1,lastrRecEstab1);                              
-            estabComercial1 = estabComercial1.toLocaleString('pt-br',{minimumFractionDigits: 2});              
-            $("input[name=estabComercial]").val(estabComercial1);  
-        }                
+        // if (Math.max(antecRecEstab2,lastrRecEstab2) > estabProposto2){
+        //     var estabComercial = "Ajuste ao limite proposto";             
+        // } else {    
+       
+        var estabComercial1 = Math.max(antecRecEstab1,lastrRecEstab1);                                     
+        estabComercial1 = estabComercial1.toLocaleString('pt-br',{minimumFractionDigits: 2});              
+        $("input[name=estabComercial]").val(estabComercial1);  
+        // }                
     }
     return false;
 }); 
