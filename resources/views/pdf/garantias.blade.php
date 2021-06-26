@@ -1,0 +1,4 @@
+<!-- Garantias-->
+<textarea>{{$garantias}}</textarea>                
+
+

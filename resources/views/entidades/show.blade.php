@@ -45,7 +45,7 @@
          <button class="btn btn-primary" type="button" id="desenvBtn">
                 Desenvolvedor
         </button>  
-        <!-- enviar dados na controller store para o cálculo do modelo                         -->
+        <!-- enviar dados na controller pdf                         -->
         <form method="post" action="{{ route('entidade.pdf') }}" name="form" id="formulario">                                             
                 <input type="hidden" name="mci" value="{{$mci}}"/> 
                 <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -96,9 +96,9 @@
                         @include('entidades.parecer')                           
                 </div> 
                  <!-- botão para gerar súmula -->
-        <button class="btn btn-primary" type="submit" id="gerarBtn" action="pagina.php" >
-                Gerar Súmula
-        </button>                                     
+                <button class="btn btn-primary" type="submit" id="gerarBtn" action="pagina.php" >
+                        Gerar Súmula
+                </button>                                     
         </form>      
         <div class="ajax-loader" style = "display:none;">
                 <img src="{{ url('img/ajax-loader.gif') }}" class="img-responsive" />

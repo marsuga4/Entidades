@@ -147,7 +147,15 @@
    .pdf table .w30{
         width: 30%;
    }
-   
+
+/* Texts areas */
+textarea{
+    width: 80%;
+    resize: none !important;  
+    border: 2px solid black;
+    height: 6em;
+}
+    
    
 </style>
 
@@ -183,6 +191,9 @@
     @include('pdf.risco_limite')
     <h1>Portfólio do Limite de Crédito</h1>
     @include('pdf.portfolio')
-    
+    <h1>Informações Adicionais Sobre Garantias</h1>
+    @include('pdf.garantias')
+    <h1>Parecer/Despacho da Agência</h1>
+    @include('pdf.parecer')
 
 </div>                                                                         

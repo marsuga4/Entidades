@@ -783,6 +783,7 @@ function validarDirigentes(){
 
 
 // função acionada após a validação dos dirigentes
+// ennvia todos os dados do formulário para o controller Store
 function enviaForm(){            
         var url = window.location.protocol+'//'+window.location.host+'/entidades/store';     
         $.ajaxSetup({
@@ -1291,3 +1292,11 @@ $(document).ready(function() {
     });     
 });
 
+// Função para quebrar linhas do parecer
+
+$(document).ready(function() {
+    var content = '<pre>';
+    var textContent = document.querySelector('textarea').value;
+    content += textContent;
+    document.getElementById('parecer').innerHTML = content;
+});

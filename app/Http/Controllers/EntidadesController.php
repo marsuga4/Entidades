@@ -5,7 +5,7 @@
 	use DateTime;	
 	//incluir o mapeamento da classe Entidade
 	use App\Entidade;
-	use Barryvdh\DomPDF\Facade as PDF;
+	use Barryvdh\DomPDF\Facade as PDF;	
 	use illuminate\Http\Request;
 	use Illuminate\Support\Facades\Redirect;
 	use Session;
@@ -1331,12 +1331,21 @@
 		// Turn into base64 image
 		$baseImage = base64_encode($baseImage);
 		$baseImage = 'data:image/png;base64,'.$baseImage;		
-		$pdf = PDF::loadView('pdf.pdf', array_merge($request->all(),['logo'=>$baseImage]));
+		// recebe todas as infs do pdf
+		$pdf = PDF::loadView('pdf.pdf', array_merge($request->all(),['logo'=>$baseImage]));		
+		// gerar um timestamp com o MCI da entidade
 		$name = $request->mci.'-'.date('d-m-Y-h-i-s',time());
+		// armazena a súmula
 		Storage::put('controle-sumulas/'.$name.'.pdf',$pdf->download()->getOriginalContent());
 		return view('pdf.pdf', array_merge($request->all(),['logo'=>$baseImage]));
 	}
+	
+	// public function pdf (Request $request){	
+		
+	// 	$mpdf = new \Mpdf\Mpdf();
+		
 
+	// }	
 }
 
 	

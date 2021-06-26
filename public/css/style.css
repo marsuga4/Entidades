@@ -153,6 +153,13 @@ input:required{
   transform: translate(-50%, -50%);
 }
 
+textarea{
+  width: 80%;
+  resize: none !important;  
+  border: 2px solid black;
+
+}
+
 
 
 
