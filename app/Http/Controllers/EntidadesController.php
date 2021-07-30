@@ -1,16 +1,19 @@
 <?php 
 	// incluir o mapeamento da classe entidadesController
-	namespace App\Http\Controllers;
+	namespace App\Http\Controllers;	
+	use App\Http\Controllers\Controller;
 	use Carbon\Carbon;	
 	use DateTime;	
 	//incluir o mapeamento da classe Entidade
-	use App\Entidade;
+	use App\Entidade;	
 	use Barryvdh\DomPDF\Facade as PDF;	
 	use illuminate\Http\Request;
 	use Illuminate\Support\Facades\Redirect;
 	use Session;
 	use Illuminate\Support\Facades\Input;
 	use Illuminate\Support\Facades\Storage;
+	use Codedge\Fpdf\Fpdf\Fpdf;
+
 
 //herda da classe Controller que já vem do laravel
 	class EntidadesController extends Controller
@@ -1323,6 +1326,21 @@
 	    return redirect('/entidades');
 	}
 	
+	
+	// public function pdf (Request $request){					
+	// 	$baseImage = Storage::get('public/logo.png');		
+	// 	$baseImage = base64_encode($baseImage);
+	// 	$baseImage = 'data:image/png;base64,'.$baseImage;
+	// 	$customPaper = array(0,0,360,360);
+	// 	$pdf = PDF::loadView('pdf.pdf', array_merge($request->all(),['logo'=>$baseImage]));	
+	// 	return $pdf->stream('teste.pdf');
+	// }
+		//return view('pdf.pdf', array_merge($request->all(),['logo'=>$baseImage]));
+		//return $pdf->stream('teste.pdf',  array_merge($request->all(),['logo'=>$baseImage]));
+		
+
+	
+
 
 	public function pdf (Request $request){
 		//dd($request->all());
@@ -1340,6 +1358,16 @@
 		return view('pdf.pdf', array_merge($request->all(),['logo'=>$baseImage]));
 	}
 	
+	// public function generatePDF ($data){
+	// 	 # Create a new PDF document.
+	// 	 $pdf = new InvoicePdf( $data, 'P', 'pt', 'LETTER' );
+
+	// 	 # Generate the invoice.
+	// 	 $pdf->CreateInvoice();
+	 
+	// 	 # Output the PDF document.
+	// 	 $pdf->Output( 'Your_Invoice.pdf', 'D' );
+    // }
 	// public function pdf (Request $request){	
 		
 	// 	$mpdf = new \Mpdf\Mpdf();

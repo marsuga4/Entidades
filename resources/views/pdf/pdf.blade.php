@@ -1,3 +1,5 @@
+
+ 
 <style>
     /* formatar as questões */
     .pdf .questions {
@@ -155,15 +157,16 @@ textarea{
     border: 2px solid black;
     height: 6em;
 }
-    
+
+ 
    
 </style>
 
 <!-- includes das views -->
-<div class="pdf">   
+<div class="pdf">       
     <table>
         <tr class="bold">
-            <td rowspan="2" style="width: 25%;"> <img src="{{$logo}}" width='100%' height="auto"/> </td>
+            <td rowspan="2" style="width: 25%;"> <<img src="{{$logo}}" width='100%' height="auto"/> </td>            
             <td style="width: 75%; text-align:justify;">Súmula de Análise de Risco e Limite de Crédito </td>
         </tr>
         <tr class="bold">           
